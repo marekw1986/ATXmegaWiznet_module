@@ -58,7 +58,7 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>pk4hybrid</platformTool>
         <languageToolchain>XC8</languageToolchain>
-        <languageToolchainVersion>1.44</languageToolchainVersion>
+        <languageToolchainVersion>2.20</languageToolchainVersion>
         <platform>2</platform>
       </toolsSet>
       <packs>
@@ -179,7 +179,6 @@
         <property key="stack-size-main" value="auto"/>
         <property key="stack-type" value="compiled"/>
         <property key="user-pack-device-support" value=""/>
-        <appendMe value="-save-temps"/>
       </XC8-config-global>
       <pk4hybrid>
         <property key="AutoSelectMemRanges" value="auto"/>
