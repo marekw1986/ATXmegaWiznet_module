@@ -19,6 +19,8 @@
 #include "fatfs/ff.h"
 #include "fatfs/ffconf.h"
 #include "fatfs/diskio.h"
+#include "mqtt/MQTTTimer.h"
+#include "mqtt/MQTTClient.h"
 //#include "usb/usb_xmega.h"
 
 //USB_ENDPOINTS(0);
