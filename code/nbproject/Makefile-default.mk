@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=fatfs/ff.c fatfs/ffsystem.c fatfs/ffunicode.c fatfs/sd.c fatfs/diskio.c w5100/w5100.c w5100/w5100_func.c main.c time/time.c wdt_driver.c mqtt/MQTTClient.c mqtt/MQTTConnectClient.c mqtt/MQTTConnectServer.c mqtt/MQTTDeserializePublish.c mqtt/MQTTFormat.c mqtt/MQTTPacket.c mqtt/MQTTSerializePublish.c mqtt/MQTTSubscribeClient.c mqtt/MQTTSubscribeServer.c mqtt/MQTTUnsubscribeClient.c mqtt/MQTTUnsubscribeServer.c mqtt/MQTTTimer.c mqtt/MQTTNetwork.c
+SOURCEFILES_QUOTED_IF_SPACED=fatfs/ff.c fatfs/ffsystem.c fatfs/ffunicode.c fatfs/sd.c fatfs/diskio.c w5100/w5100.c w5100/w5100_func.c main.c time/time.c wdt_driver.c mqtt/MQTTClient.c mqtt/MQTTConnectClient.c mqtt/MQTTDeserializePublish.c mqtt/MQTTFormat.c mqtt/MQTTPacket.c mqtt/MQTTSerializePublish.c mqtt/MQTTSubscribeClient.c mqtt/MQTTUnsubscribeClient.c mqtt/MQTTTimer.c mqtt/MQTTNetwork.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/fatfs/ff.o ${OBJECTDIR}/fatfs/ffsystem.o ${OBJECTDIR}/fatfs/ffunicode.o ${OBJECTDIR}/fatfs/sd.o ${OBJECTDIR}/fatfs/diskio.o ${OBJECTDIR}/w5100/w5100.o ${OBJECTDIR}/w5100/w5100_func.o ${OBJECTDIR}/main.o ${OBJECTDIR}/time/time.o ${OBJECTDIR}/wdt_driver.o ${OBJECTDIR}/mqtt/MQTTClient.o ${OBJECTDIR}/mqtt/MQTTConnectClient.o ${OBJECTDIR}/mqtt/MQTTConnectServer.o ${OBJECTDIR}/mqtt/MQTTDeserializePublish.o ${OBJECTDIR}/mqtt/MQTTFormat.o ${OBJECTDIR}/mqtt/MQTTPacket.o ${OBJECTDIR}/mqtt/MQTTSerializePublish.o ${OBJECTDIR}/mqtt/MQTTSubscribeClient.o ${OBJECTDIR}/mqtt/MQTTSubscribeServer.o ${OBJECTDIR}/mqtt/MQTTUnsubscribeClient.o ${OBJECTDIR}/mqtt/MQTTUnsubscribeServer.o ${OBJECTDIR}/mqtt/MQTTTimer.o ${OBJECTDIR}/mqtt/MQTTNetwork.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/fatfs/ff.o.d ${OBJECTDIR}/fatfs/ffsystem.o.d ${OBJECTDIR}/fatfs/ffunicode.o.d ${OBJECTDIR}/fatfs/sd.o.d ${OBJECTDIR}/fatfs/diskio.o.d ${OBJECTDIR}/w5100/w5100.o.d ${OBJECTDIR}/w5100/w5100_func.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/time/time.o.d ${OBJECTDIR}/wdt_driver.o.d ${OBJECTDIR}/mqtt/MQTTClient.o.d ${OBJECTDIR}/mqtt/MQTTConnectClient.o.d ${OBJECTDIR}/mqtt/MQTTConnectServer.o.d ${OBJECTDIR}/mqtt/MQTTDeserializePublish.o.d ${OBJECTDIR}/mqtt/MQTTFormat.o.d ${OBJECTDIR}/mqtt/MQTTPacket.o.d ${OBJECTDIR}/mqtt/MQTTSerializePublish.o.d ${OBJECTDIR}/mqtt/MQTTSubscribeClient.o.d ${OBJECTDIR}/mqtt/MQTTSubscribeServer.o.d ${OBJECTDIR}/mqtt/MQTTUnsubscribeClient.o.d ${OBJECTDIR}/mqtt/MQTTUnsubscribeServer.o.d ${OBJECTDIR}/mqtt/MQTTTimer.o.d ${OBJECTDIR}/mqtt/MQTTNetwork.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/fatfs/ff.o ${OBJECTDIR}/fatfs/ffsystem.o ${OBJECTDIR}/fatfs/ffunicode.o ${OBJECTDIR}/fatfs/sd.o ${OBJECTDIR}/fatfs/diskio.o ${OBJECTDIR}/w5100/w5100.o ${OBJECTDIR}/w5100/w5100_func.o ${OBJECTDIR}/main.o ${OBJECTDIR}/time/time.o ${OBJECTDIR}/wdt_driver.o ${OBJECTDIR}/mqtt/MQTTClient.o ${OBJECTDIR}/mqtt/MQTTConnectClient.o ${OBJECTDIR}/mqtt/MQTTDeserializePublish.o ${OBJECTDIR}/mqtt/MQTTFormat.o ${OBJECTDIR}/mqtt/MQTTPacket.o ${OBJECTDIR}/mqtt/MQTTSerializePublish.o ${OBJECTDIR}/mqtt/MQTTSubscribeClient.o ${OBJECTDIR}/mqtt/MQTTUnsubscribeClient.o ${OBJECTDIR}/mqtt/MQTTTimer.o ${OBJECTDIR}/mqtt/MQTTNetwork.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/fatfs/ff.o.d ${OBJECTDIR}/fatfs/ffsystem.o.d ${OBJECTDIR}/fatfs/ffunicode.o.d ${OBJECTDIR}/fatfs/sd.o.d ${OBJECTDIR}/fatfs/diskio.o.d ${OBJECTDIR}/w5100/w5100.o.d ${OBJECTDIR}/w5100/w5100_func.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/time/time.o.d ${OBJECTDIR}/wdt_driver.o.d ${OBJECTDIR}/mqtt/MQTTClient.o.d ${OBJECTDIR}/mqtt/MQTTConnectClient.o.d ${OBJECTDIR}/mqtt/MQTTDeserializePublish.o.d ${OBJECTDIR}/mqtt/MQTTFormat.o.d ${OBJECTDIR}/mqtt/MQTTPacket.o.d ${OBJECTDIR}/mqtt/MQTTSerializePublish.o.d ${OBJECTDIR}/mqtt/MQTTSubscribeClient.o.d ${OBJECTDIR}/mqtt/MQTTUnsubscribeClient.o.d ${OBJECTDIR}/mqtt/MQTTTimer.o.d ${OBJECTDIR}/mqtt/MQTTNetwork.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/fatfs/ff.o ${OBJECTDIR}/fatfs/ffsystem.o ${OBJECTDIR}/fatfs/ffunicode.o ${OBJECTDIR}/fatfs/sd.o ${OBJECTDIR}/fatfs/diskio.o ${OBJECTDIR}/w5100/w5100.o ${OBJECTDIR}/w5100/w5100_func.o ${OBJECTDIR}/main.o ${OBJECTDIR}/time/time.o ${OBJECTDIR}/wdt_driver.o ${OBJECTDIR}/mqtt/MQTTClient.o ${OBJECTDIR}/mqtt/MQTTConnectClient.o ${OBJECTDIR}/mqtt/MQTTConnectServer.o ${OBJECTDIR}/mqtt/MQTTDeserializePublish.o ${OBJECTDIR}/mqtt/MQTTFormat.o ${OBJECTDIR}/mqtt/MQTTPacket.o ${OBJECTDIR}/mqtt/MQTTSerializePublish.o ${OBJECTDIR}/mqtt/MQTTSubscribeClient.o ${OBJECTDIR}/mqtt/MQTTSubscribeServer.o ${OBJECTDIR}/mqtt/MQTTUnsubscribeClient.o ${OBJECTDIR}/mqtt/MQTTUnsubscribeServer.o ${OBJECTDIR}/mqtt/MQTTTimer.o ${OBJECTDIR}/mqtt/MQTTNetwork.o
+OBJECTFILES=${OBJECTDIR}/fatfs/ff.o ${OBJECTDIR}/fatfs/ffsystem.o ${OBJECTDIR}/fatfs/ffunicode.o ${OBJECTDIR}/fatfs/sd.o ${OBJECTDIR}/fatfs/diskio.o ${OBJECTDIR}/w5100/w5100.o ${OBJECTDIR}/w5100/w5100_func.o ${OBJECTDIR}/main.o ${OBJECTDIR}/time/time.o ${OBJECTDIR}/wdt_driver.o ${OBJECTDIR}/mqtt/MQTTClient.o ${OBJECTDIR}/mqtt/MQTTConnectClient.o ${OBJECTDIR}/mqtt/MQTTDeserializePublish.o ${OBJECTDIR}/mqtt/MQTTFormat.o ${OBJECTDIR}/mqtt/MQTTPacket.o ${OBJECTDIR}/mqtt/MQTTSerializePublish.o ${OBJECTDIR}/mqtt/MQTTSubscribeClient.o ${OBJECTDIR}/mqtt/MQTTUnsubscribeClient.o ${OBJECTDIR}/mqtt/MQTTTimer.o ${OBJECTDIR}/mqtt/MQTTNetwork.o
 
 # Source Files
-SOURCEFILES=fatfs/ff.c fatfs/ffsystem.c fatfs/ffunicode.c fatfs/sd.c fatfs/diskio.c w5100/w5100.c w5100/w5100_func.c main.c time/time.c wdt_driver.c mqtt/MQTTClient.c mqtt/MQTTConnectClient.c mqtt/MQTTConnectServer.c mqtt/MQTTDeserializePublish.c mqtt/MQTTFormat.c mqtt/MQTTPacket.c mqtt/MQTTSerializePublish.c mqtt/MQTTSubscribeClient.c mqtt/MQTTSubscribeServer.c mqtt/MQTTUnsubscribeClient.c mqtt/MQTTUnsubscribeServer.c mqtt/MQTTTimer.c mqtt/MQTTNetwork.c
+SOURCEFILES=fatfs/ff.c fatfs/ffsystem.c fatfs/ffunicode.c fatfs/sd.c fatfs/diskio.c w5100/w5100.c w5100/w5100_func.c main.c time/time.c wdt_driver.c mqtt/MQTTClient.c mqtt/MQTTConnectClient.c mqtt/MQTTDeserializePublish.c mqtt/MQTTFormat.c mqtt/MQTTPacket.c mqtt/MQTTSerializePublish.c mqtt/MQTTSubscribeClient.c mqtt/MQTTUnsubscribeClient.c mqtt/MQTTTimer.c mqtt/MQTTNetwork.c
 
 # Pack Options 
 PACK_COMPILER_OPTIONS=-I "${DFP_DIR}/include"
@@ -176,12 +176,6 @@ ${OBJECTDIR}/mqtt/MQTTConnectClient.o: mqtt/MQTTConnectClient.c  .generated_file
 	@${RM} ${OBJECTDIR}/mqtt/MQTTConnectClient.o 
 	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -MD -MP -MF "${OBJECTDIR}/mqtt/MQTTConnectClient.o.d" -MT "${OBJECTDIR}/mqtt/MQTTConnectClient.o.d" -MT ${OBJECTDIR}/mqtt/MQTTConnectClient.o  -o ${OBJECTDIR}/mqtt/MQTTConnectClient.o mqtt/MQTTConnectClient.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/mqtt/MQTTConnectServer.o: mqtt/MQTTConnectServer.c  .generated_files/flags/default/8917f281b32bf3bec2707064c9195b45662f4e23 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/mqtt" 
-	@${RM} ${OBJECTDIR}/mqtt/MQTTConnectServer.o.d 
-	@${RM} ${OBJECTDIR}/mqtt/MQTTConnectServer.o 
-	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -MD -MP -MF "${OBJECTDIR}/mqtt/MQTTConnectServer.o.d" -MT "${OBJECTDIR}/mqtt/MQTTConnectServer.o.d" -MT ${OBJECTDIR}/mqtt/MQTTConnectServer.o  -o ${OBJECTDIR}/mqtt/MQTTConnectServer.o mqtt/MQTTConnectServer.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
-	
 ${OBJECTDIR}/mqtt/MQTTDeserializePublish.o: mqtt/MQTTDeserializePublish.c  .generated_files/flags/default/437282c4c08a3b3408846418074adca3796f57a4 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/mqtt" 
 	@${RM} ${OBJECTDIR}/mqtt/MQTTDeserializePublish.o.d 
@@ -212,23 +206,11 @@ ${OBJECTDIR}/mqtt/MQTTSubscribeClient.o: mqtt/MQTTSubscribeClient.c  .generated_
 	@${RM} ${OBJECTDIR}/mqtt/MQTTSubscribeClient.o 
 	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -MD -MP -MF "${OBJECTDIR}/mqtt/MQTTSubscribeClient.o.d" -MT "${OBJECTDIR}/mqtt/MQTTSubscribeClient.o.d" -MT ${OBJECTDIR}/mqtt/MQTTSubscribeClient.o  -o ${OBJECTDIR}/mqtt/MQTTSubscribeClient.o mqtt/MQTTSubscribeClient.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/mqtt/MQTTSubscribeServer.o: mqtt/MQTTSubscribeServer.c  .generated_files/flags/default/a143ea93f1b2cce5f0361d10a2e2b7a4019542d4 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/mqtt" 
-	@${RM} ${OBJECTDIR}/mqtt/MQTTSubscribeServer.o.d 
-	@${RM} ${OBJECTDIR}/mqtt/MQTTSubscribeServer.o 
-	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -MD -MP -MF "${OBJECTDIR}/mqtt/MQTTSubscribeServer.o.d" -MT "${OBJECTDIR}/mqtt/MQTTSubscribeServer.o.d" -MT ${OBJECTDIR}/mqtt/MQTTSubscribeServer.o  -o ${OBJECTDIR}/mqtt/MQTTSubscribeServer.o mqtt/MQTTSubscribeServer.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
-	
 ${OBJECTDIR}/mqtt/MQTTUnsubscribeClient.o: mqtt/MQTTUnsubscribeClient.c  .generated_files/flags/default/8b592e5ccc700091bedea03ea9d63fbb562ec16a .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/mqtt" 
 	@${RM} ${OBJECTDIR}/mqtt/MQTTUnsubscribeClient.o.d 
 	@${RM} ${OBJECTDIR}/mqtt/MQTTUnsubscribeClient.o 
 	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -MD -MP -MF "${OBJECTDIR}/mqtt/MQTTUnsubscribeClient.o.d" -MT "${OBJECTDIR}/mqtt/MQTTUnsubscribeClient.o.d" -MT ${OBJECTDIR}/mqtt/MQTTUnsubscribeClient.o  -o ${OBJECTDIR}/mqtt/MQTTUnsubscribeClient.o mqtt/MQTTUnsubscribeClient.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
-	
-${OBJECTDIR}/mqtt/MQTTUnsubscribeServer.o: mqtt/MQTTUnsubscribeServer.c  .generated_files/flags/default/75bd12af3a41bd7c64bfc80dc33dcf413b536212 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/mqtt" 
-	@${RM} ${OBJECTDIR}/mqtt/MQTTUnsubscribeServer.o.d 
-	@${RM} ${OBJECTDIR}/mqtt/MQTTUnsubscribeServer.o 
-	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -MD -MP -MF "${OBJECTDIR}/mqtt/MQTTUnsubscribeServer.o.d" -MT "${OBJECTDIR}/mqtt/MQTTUnsubscribeServer.o.d" -MT ${OBJECTDIR}/mqtt/MQTTUnsubscribeServer.o  -o ${OBJECTDIR}/mqtt/MQTTUnsubscribeServer.o mqtt/MQTTUnsubscribeServer.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
 	
 ${OBJECTDIR}/mqtt/MQTTTimer.o: mqtt/MQTTTimer.c  .generated_files/flags/default/5a98b2e7ba3c937a8df1d4a49462b956e8969043 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/mqtt" 
@@ -315,12 +297,6 @@ ${OBJECTDIR}/mqtt/MQTTConnectClient.o: mqtt/MQTTConnectClient.c  .generated_file
 	@${RM} ${OBJECTDIR}/mqtt/MQTTConnectClient.o 
 	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -MD -MP -MF "${OBJECTDIR}/mqtt/MQTTConnectClient.o.d" -MT "${OBJECTDIR}/mqtt/MQTTConnectClient.o.d" -MT ${OBJECTDIR}/mqtt/MQTTConnectClient.o  -o ${OBJECTDIR}/mqtt/MQTTConnectClient.o mqtt/MQTTConnectClient.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/mqtt/MQTTConnectServer.o: mqtt/MQTTConnectServer.c  .generated_files/flags/default/f4f6678827a0db2a0a9928b8480b4eb7e38c53d9 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/mqtt" 
-	@${RM} ${OBJECTDIR}/mqtt/MQTTConnectServer.o.d 
-	@${RM} ${OBJECTDIR}/mqtt/MQTTConnectServer.o 
-	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -MD -MP -MF "${OBJECTDIR}/mqtt/MQTTConnectServer.o.d" -MT "${OBJECTDIR}/mqtt/MQTTConnectServer.o.d" -MT ${OBJECTDIR}/mqtt/MQTTConnectServer.o  -o ${OBJECTDIR}/mqtt/MQTTConnectServer.o mqtt/MQTTConnectServer.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
-	
 ${OBJECTDIR}/mqtt/MQTTDeserializePublish.o: mqtt/MQTTDeserializePublish.c  .generated_files/flags/default/e2b8188781681129e111e221d081d17af7cd06c9 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/mqtt" 
 	@${RM} ${OBJECTDIR}/mqtt/MQTTDeserializePublish.o.d 
@@ -351,23 +327,11 @@ ${OBJECTDIR}/mqtt/MQTTSubscribeClient.o: mqtt/MQTTSubscribeClient.c  .generated_
 	@${RM} ${OBJECTDIR}/mqtt/MQTTSubscribeClient.o 
 	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -MD -MP -MF "${OBJECTDIR}/mqtt/MQTTSubscribeClient.o.d" -MT "${OBJECTDIR}/mqtt/MQTTSubscribeClient.o.d" -MT ${OBJECTDIR}/mqtt/MQTTSubscribeClient.o  -o ${OBJECTDIR}/mqtt/MQTTSubscribeClient.o mqtt/MQTTSubscribeClient.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
 	
-${OBJECTDIR}/mqtt/MQTTSubscribeServer.o: mqtt/MQTTSubscribeServer.c  .generated_files/flags/default/38bcce66b8df0ad467e048304c6f70b261d4d2c9 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/mqtt" 
-	@${RM} ${OBJECTDIR}/mqtt/MQTTSubscribeServer.o.d 
-	@${RM} ${OBJECTDIR}/mqtt/MQTTSubscribeServer.o 
-	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -MD -MP -MF "${OBJECTDIR}/mqtt/MQTTSubscribeServer.o.d" -MT "${OBJECTDIR}/mqtt/MQTTSubscribeServer.o.d" -MT ${OBJECTDIR}/mqtt/MQTTSubscribeServer.o  -o ${OBJECTDIR}/mqtt/MQTTSubscribeServer.o mqtt/MQTTSubscribeServer.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
-	
 ${OBJECTDIR}/mqtt/MQTTUnsubscribeClient.o: mqtt/MQTTUnsubscribeClient.c  .generated_files/flags/default/d0d01c21cc2d71b9764b1047976b7458e2623dd8 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/mqtt" 
 	@${RM} ${OBJECTDIR}/mqtt/MQTTUnsubscribeClient.o.d 
 	@${RM} ${OBJECTDIR}/mqtt/MQTTUnsubscribeClient.o 
 	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -MD -MP -MF "${OBJECTDIR}/mqtt/MQTTUnsubscribeClient.o.d" -MT "${OBJECTDIR}/mqtt/MQTTUnsubscribeClient.o.d" -MT ${OBJECTDIR}/mqtt/MQTTUnsubscribeClient.o  -o ${OBJECTDIR}/mqtt/MQTTUnsubscribeClient.o mqtt/MQTTUnsubscribeClient.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
-	
-${OBJECTDIR}/mqtt/MQTTUnsubscribeServer.o: mqtt/MQTTUnsubscribeServer.c  .generated_files/flags/default/17e8522fa8f2a99e867b63277420fce6c9c477cc .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
-	@${MKDIR} "${OBJECTDIR}/mqtt" 
-	@${RM} ${OBJECTDIR}/mqtt/MQTTUnsubscribeServer.o.d 
-	@${RM} ${OBJECTDIR}/mqtt/MQTTUnsubscribeServer.o 
-	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -Wall -MD -MP -MF "${OBJECTDIR}/mqtt/MQTTUnsubscribeServer.o.d" -MT "${OBJECTDIR}/mqtt/MQTTUnsubscribeServer.o.d" -MT ${OBJECTDIR}/mqtt/MQTTUnsubscribeServer.o  -o ${OBJECTDIR}/mqtt/MQTTUnsubscribeServer.o mqtt/MQTTUnsubscribeServer.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
 	
 ${OBJECTDIR}/mqtt/MQTTTimer.o: mqtt/MQTTTimer.c  .generated_files/flags/default/22ca652e3b638e69c37535f878585ef2d31e0a0 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/mqtt" 
