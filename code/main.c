@@ -15,13 +15,10 @@
 
 #include "wdt_driver.h"
 #include "time/time.h"
-#include "w5100/w5100.h"
-#include "w5100/w5100_func.h"
 #include "fatfs/ff.h"
 #include "fatfs/ffconf.h"
 #include "fatfs/diskio.h"
-#include "mqtt/MQTTTimer.h"
-#include "mqtt/MQTTClient.h"
+#include "wiznet/Ethernet/wizchip_conf.h"
 //#include "usb/usb_xmega.h"
 
 //USB_ENDPOINTS(0);
@@ -31,13 +28,6 @@
 #define MQTT_CLIENT_ID "ATxmegaClient"
 #define MQTT_TOPIC     "test/topic"
 #define MQTT_MESSAGE   "Hello from ATxmega!"
-
-W5100_CFG w5100_default_conf = {
-	{0x00, 0x08, 0xDC, 0x55, 0x00, 0x01},	// MAC address
-	{192, 168, 1, 35},                     // IP address
-	{255, 255, 255, 0},                     // Subnet mask
-	{192, 168, 1, 1},                     // Gateway
-};
 
 FATFS SDFatFS;
 
@@ -83,10 +73,10 @@ int main(int argc, char** argv) {
 
 	//mysocket = 0;		
 	//sockaddr = W5100_SKT_BASE(mysocket);    
-    W51_init();
-    _delay_ms(1000);
-	W51_config(&w5100_default_conf);	// config the W5100 (MAC, TCP address, subnet, etc
-    _delay_ms(100);
+//    W51_init();
+//    _delay_ms(1000);
+//	W51_config(&w5100_default_conf);	// config the W5100 (MAC, TCP address, subnet, etc
+//    _delay_ms(100);
     
     res = f_mount(&SDFatFS, "", 0);
     if (res != FR_OK) {printf_P(PSTR("SD f_mount error code: %i\r\n"), res);}
@@ -100,48 +90,6 @@ int main(int argc, char** argv) {
     
     WDT_Disable();
     WDT_EnableAndSetTimeout(WDT_PER_2KCLK_gc);
-    
-    // Initialize W5100 Network struct for MQTT
-    Network net;
-    NetworkInit(&net);
-    // Use socket 0 for MQTT
-    if (NetworkConnect(&net, 0, MQTT_BROKER_IP, MQTT_BROKER_PORT) != 0) {
-        // Connection failed
-        printf_P(PSTR("MQTT connection failed. Waiting for WDT reset.\r\n"));
-        while(1);
-    }
-    
-    // Initialize MQTT client
-    MQTTClient client;
-    MQTTClientInit(&client, &net, 1000, sendbuf, sizeof(sendbuf), recvbuf, sizeof(recvbuf));
-    
-    // MQTT connect data
-    MQTTPacket_connectData connectData = MQTTPacket_connectData_initializer;
-    connectData.clientID.cstring = MQTT_CLIENT_ID;
-
-    if (MQTTConnect(&client, &connectData) != 0) {
-        // MQTT connect failed
-        while(1);
-    }
-    
-    // Prepare message
-    MQTTMessage message;
-    message.qos = QOS0;
-    message.retained = 0;
-    message.dup = 0;
-    message.payload = (void*)MQTT_MESSAGE;
-    message.payloadlen = strlen(MQTT_MESSAGE);
-
-    // Publish message
-    if (MQTTPublish(&client, MQTT_TOPIC, &message) != 0) {
-        // Publish failed
-        while(1);
-    }
-
-    // Optional: disconnect cleanly
-    MQTTDisconnect(&client);
-    NetworkDisconnect(&net);
-    
     
     while (1) {
         handle_blink();

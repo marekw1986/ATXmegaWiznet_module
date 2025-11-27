@@ -15,6 +15,7 @@
             <sourceRootList>
                 <sourceRootElem>usb</sourceRootElem>
                 <sourceRootElem>mqtt</sourceRootElem>
+                <sourceRootElem>wiznet/Ethernet</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

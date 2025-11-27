@@ -3,11 +3,18 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/marek/Projekty/ATXmegaWiznet_module/code/main.c</file>
-            <file>file:/home/marek/Projekty/ATXmegaWiznet_module/code/w5100/w5100_func.h</file>
-            <file>file:/home/marek/Projekty/ATXmegaWiznet_module/code/w5100/w5100.h</file>
-            <file>file:/home/marek/Projekty/ATXmegaWiznet_module/code/w5100/w5100_func.c</file>
+            <file>file:/home/marek/Dropbox/Projekty/ATXMegaWiznet_module/code/fatfs/sd.c</file>
+            <file>file:/home/marek/Dropbox/Projekty/ATXMegaWiznet_module/code/w5100/w5100.c</file>
+            <file>file:/home/marek/Dropbox/Projekty/ATXMegaWiznet_module/code/wizchip_spi.c</file>
             <file>file:/usr/lib/avr/include/util/delay.h</file>
+            <file>file:/home/marek/Dropbox/Projekty/ATXMegaWiznet_module/code/wiznet/Ethernet/wizchip_conf.h</file>
+            <file>file:/home/marek/Dropbox/Projekty/ATXMegaWiznet_module/code/w5100/w5100_func.c</file>
+            <file>file:/home/marek/Dropbox/Projekty/ATXMegaWiznet_module/code/main.c</file>
+            <file>file:/home/marek/Dropbox/Projekty/ATXMegaWiznet_module/code/wiznet/Ethernet/wizchip_conf.c</file>
+            <file>file:/home/marek/Dropbox/Projekty/ATXMegaWiznet_module/code/wiznet/Ethernet/socket.c</file>
+            <file>file:/home/marek/Dropbox/Projekty/ATXMegaWiznet_module/code/wiznet/Ethernet/W5100/w5100.c</file>
+            <file>file:/home/marek/Dropbox/Projekty/ATXMegaWiznet_module/code/wiznet/Ethernet/W6300/w6300.h</file>
+            <file>file:/home/marek/Dropbox/Projekty/ATXMegaWiznet_module/code/wiznet/Ethernet/W5100/w5100.h</file>
         </group>
     </open-files>
 </project-private>
