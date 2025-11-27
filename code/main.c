@@ -18,6 +18,7 @@
 #include "fatfs/ff.h"
 #include "fatfs/ffconf.h"
 #include "fatfs/diskio.h"
+#include "wizchip_spi.h"
 #include "wiznet/Ethernet/wizchip_conf.h"
 //#include "usb/usb_xmega.h"
 
@@ -77,6 +78,8 @@ int main(int argc, char** argv) {
 //    _delay_ms(1000);
 //	W51_config(&w5100_default_conf);	// config the W5100 (MAC, TCP address, subnet, etc
 //    _delay_ms(100);
+    
+    wizchip_initialize();
     
     res = f_mount(&SDFatFS, "", 0);
     if (res != FR_OK) {printf_P(PSTR("SD f_mount error code: %i\r\n"), res);}

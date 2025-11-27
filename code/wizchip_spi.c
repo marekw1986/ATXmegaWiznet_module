@@ -76,6 +76,7 @@ void wizchip_initialize(void) {
     /* SPI function register */
 
     reg_wizchip_spi_cbfunc(wizchip_read, wizchip_write);
+    reg_wizchip_cris_cbfunc(wizchip_critical_section_lock, wizchip_critical_section_unlock);
 
     /* W5x00, W6x00 initialize */
     uint8_t temp;
@@ -203,20 +204,4 @@ void print_ipv6_addr(uint8_t* name, uint8_t* ip6addr) {
     printf(":%04X:%04X", ((uint16_t)ip6addr[4] << 8) | ((uint16_t)ip6addr[5]), ((uint16_t)ip6addr[6] << 8) | ((uint16_t)ip6addr[7]));
     printf(":%04X:%04X", ((uint16_t)ip6addr[8] << 8) | ((uint16_t)ip6addr[9]), ((uint16_t)ip6addr[10] << 8) | ((uint16_t)ip6addr[11]));
     printf(":%04X:%04X\r\n", ((uint16_t)ip6addr[12] << 8) | ((uint16_t)ip6addr[13]), ((uint16_t)ip6addr[14] << 8) | ((uint16_t)ip6addr[15]));
-}
-
-void wizchip_setup(void)
-{
-    WIZCHIP.CS._select   = wizchip_select;
-    WIZCHIP.CS._deselect = wizchip_deselect;
-
-    WIZCHIP.IF.SPI._read_byte   = wizchip_read;
-    WIZCHIP.IF.SPI._write_byte  = wizchip_write;
-    WIZCHIP.IF.SPI._read_burst  = NULL;
-    WIZCHIP.IF.SPI._write_burst = NULL;
-    
-    WIZCHIP.CRIS._enter = wizchip_critical_section_lock;
-    WIZCHIP.CRIS._exit = wizchip_critical_section_unlock;
-
-    wizchip_initialize();
 }
