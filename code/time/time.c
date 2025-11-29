@@ -1,6 +1,7 @@
 #include <avr/interrupt.h>
 #include <util/atomic.h>
 #include "time.h"
+#include "../wiznet/Internet/MQTT/mqtt_interface.h"
 
 volatile uint32_t milliseconds = 0;
 
@@ -25,4 +26,5 @@ uint32_t get_fattime (void) {
 
 ISR(TCC0_OVF_vect) {
     milliseconds++;
+    MilliTimer_Handler();
 }

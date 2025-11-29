@@ -89,10 +89,6 @@ int main(int argc, char** argv) {
     /* Get network information */
     print_network_information(g_net_info);
     
-    _delay_ms(100);
-    
-    mqtt_handle();
-    
     PMIC.CTRL = PMIC_LOLVLEN_bm;        //Without USB 
     //PMIC.CTRL = PMIC_LOLVLEN_bm | PMIC_MEDLVLEN_bm | PMIC_HILVLEN_bm; 
     sei();
@@ -103,6 +99,7 @@ int main(int argc, char** argv) {
     WDT_EnableAndSetTimeout(WDT_PER_2KCLK_gc);
     
     while (1) {
+        mqtt_handle();
         handle_blink();
         handle_write();
         disk_timerproc();
