@@ -20,21 +20,24 @@
 #include "fatfs/diskio.h"
 #include "wizchip_spi.h"
 #include "wiznet/Ethernet/wizchip_conf.h"
+#include "wiznet/Internet/MQTT/mqtt_interface.h"
+#include "wiznet/Internet/MQTT/MQTTClient.h"
+#include "hamqtt.h"
 //#include "usb/usb_xmega.h"
 
 //USB_ENDPOINTS(0);
 
-#define MQTT_BROKER_IP "192.168.1.100"  // W5100 cannot do DNS, so use IP
-#define MQTT_BROKER_PORT 1883
-#define MQTT_CLIENT_ID "ATxmegaClient"
-#define MQTT_TOPIC     "test/topic"
-#define MQTT_MESSAGE   "Hello from ATxmega!"
-
 FATFS SDFatFS;
 
-unsigned char sendbuf[128];
-unsigned char recvbuf[128];
-
+static wiz_NetInfo g_net_info =
+{
+    .mac = {0x00, 0x08, 0xDC, 0x12, 0x34, 0x56}, // MAC address
+    .ip = {192, 168, 1, 37},                     // IP address
+    .sn = {255, 255, 255, 0},                    // Subnet Mask
+    .gw = {192, 168, 1, 1},                     // Gateway
+    .dns = {8, 8, 8, 8},                         // DNS server
+    .dhcp = NETINFO_STATIC        
+};
 
 static void uart_init (void);
 static int uart_putchar(char c, FILE *stream);
@@ -71,19 +74,24 @@ int main(int argc, char** argv) {
     printf(PSTR("Start...\r\n"));
     
     time_init();
-
-	//mysocket = 0;		
-	//sockaddr = W5100_SKT_BASE(mysocket);    
-//    W51_init();
-//    _delay_ms(1000);
-//	W51_config(&w5100_default_conf);	// config the W5100 (MAC, TCP address, subnet, etc
-//    _delay_ms(100);
     
     wizchip_initialize();
     
     res = f_mount(&SDFatFS, "", 0);
     if (res != FR_OK) {printf_P(PSTR("SD f_mount error code: %i\r\n"), res);}
-    else {printf_P(PSTR("SD f_mount OK\r\n"));}    
+    else {printf_P(PSTR("SD f_mount OK\r\n"));}
+    
+    wizchip_reset();
+    wizchip_initialize();
+    wizchip_check();
+    
+    network_initialize(g_net_info);
+    /* Get network information */
+    print_network_information(g_net_info);
+    
+    _delay_ms(100);
+    
+    mqtt_handle();
     
     PMIC.CTRL = PMIC_LOLVLEN_bm;        //Without USB 
     //PMIC.CTRL = PMIC_LOLVLEN_bm | PMIC_MEDLVLEN_bm | PMIC_HILVLEN_bm; 

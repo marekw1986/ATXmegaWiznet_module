@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=fatfs/ff.c fatfs/ffsystem.c fatfs/ffunicode.c fatfs/sd.c fatfs/diskio.c wiznet/Ethernet/W5100/w5100.c wiznet/Ethernet/socket.c wiznet/Ethernet/wizchip_conf.c main.c time/time.c wdt_driver.c wizchip_spi.c
+SOURCEFILES_QUOTED_IF_SPACED=fatfs/ff.c fatfs/ffsystem.c fatfs/ffunicode.c fatfs/sd.c fatfs/diskio.c wiznet/Ethernet/W5100/w5100.c wiznet/Ethernet/socket.c wiznet/Ethernet/wizchip_conf.c main.c time/time.c wdt_driver.c wizchip_spi.c wiznet/Internet/MQTT/MQTTClient.c wiznet/Internet/MQTT/mqtt_interface.c hamqtt.c wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectClient.c wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectServer.c wiznet/Internet/MQTT/MQTTPacket/src/MQTTDeserializePublish.c wiznet/Internet/MQTT/MQTTPacket/src/MQTTFormat.c wiznet/Internet/MQTT/MQTTPacket/src/MQTTPacket.c wiznet/Internet/MQTT/MQTTPacket/src/MQTTSerializePublish.c wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeClient.c wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeServer.c wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.c wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeServer.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/fatfs/ff.o ${OBJECTDIR}/fatfs/ffsystem.o ${OBJECTDIR}/fatfs/ffunicode.o ${OBJECTDIR}/fatfs/sd.o ${OBJECTDIR}/fatfs/diskio.o ${OBJECTDIR}/wiznet/Ethernet/W5100/w5100.o ${OBJECTDIR}/wiznet/Ethernet/socket.o ${OBJECTDIR}/wiznet/Ethernet/wizchip_conf.o ${OBJECTDIR}/main.o ${OBJECTDIR}/time/time.o ${OBJECTDIR}/wdt_driver.o ${OBJECTDIR}/wizchip_spi.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/fatfs/ff.o.d ${OBJECTDIR}/fatfs/ffsystem.o.d ${OBJECTDIR}/fatfs/ffunicode.o.d ${OBJECTDIR}/fatfs/sd.o.d ${OBJECTDIR}/fatfs/diskio.o.d ${OBJECTDIR}/wiznet/Ethernet/W5100/w5100.o.d ${OBJECTDIR}/wiznet/Ethernet/socket.o.d ${OBJECTDIR}/wiznet/Ethernet/wizchip_conf.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/time/time.o.d ${OBJECTDIR}/wdt_driver.o.d ${OBJECTDIR}/wizchip_spi.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/fatfs/ff.o ${OBJECTDIR}/fatfs/ffsystem.o ${OBJECTDIR}/fatfs/ffunicode.o ${OBJECTDIR}/fatfs/sd.o ${OBJECTDIR}/fatfs/diskio.o ${OBJECTDIR}/wiznet/Ethernet/W5100/w5100.o ${OBJECTDIR}/wiznet/Ethernet/socket.o ${OBJECTDIR}/wiznet/Ethernet/wizchip_conf.o ${OBJECTDIR}/main.o ${OBJECTDIR}/time/time.o ${OBJECTDIR}/wdt_driver.o ${OBJECTDIR}/wizchip_spi.o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTClient.o ${OBJECTDIR}/wiznet/Internet/MQTT/mqtt_interface.o ${OBJECTDIR}/hamqtt.o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectClient.o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectServer.o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTDeserializePublish.o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTFormat.o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTPacket.o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSerializePublish.o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeClient.o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeServer.o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeServer.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/fatfs/ff.o.d ${OBJECTDIR}/fatfs/ffsystem.o.d ${OBJECTDIR}/fatfs/ffunicode.o.d ${OBJECTDIR}/fatfs/sd.o.d ${OBJECTDIR}/fatfs/diskio.o.d ${OBJECTDIR}/wiznet/Ethernet/W5100/w5100.o.d ${OBJECTDIR}/wiznet/Ethernet/socket.o.d ${OBJECTDIR}/wiznet/Ethernet/wizchip_conf.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/time/time.o.d ${OBJECTDIR}/wdt_driver.o.d ${OBJECTDIR}/wizchip_spi.o.d ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTClient.o.d ${OBJECTDIR}/wiznet/Internet/MQTT/mqtt_interface.o.d ${OBJECTDIR}/hamqtt.o.d ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectClient.o.d ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectServer.o.d ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTDeserializePublish.o.d ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTFormat.o.d ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTPacket.o.d ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSerializePublish.o.d ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeClient.o.d ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeServer.o.d ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.o.d ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeServer.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/fatfs/ff.o ${OBJECTDIR}/fatfs/ffsystem.o ${OBJECTDIR}/fatfs/ffunicode.o ${OBJECTDIR}/fatfs/sd.o ${OBJECTDIR}/fatfs/diskio.o ${OBJECTDIR}/wiznet/Ethernet/W5100/w5100.o ${OBJECTDIR}/wiznet/Ethernet/socket.o ${OBJECTDIR}/wiznet/Ethernet/wizchip_conf.o ${OBJECTDIR}/main.o ${OBJECTDIR}/time/time.o ${OBJECTDIR}/wdt_driver.o ${OBJECTDIR}/wizchip_spi.o
+OBJECTFILES=${OBJECTDIR}/fatfs/ff.o ${OBJECTDIR}/fatfs/ffsystem.o ${OBJECTDIR}/fatfs/ffunicode.o ${OBJECTDIR}/fatfs/sd.o ${OBJECTDIR}/fatfs/diskio.o ${OBJECTDIR}/wiznet/Ethernet/W5100/w5100.o ${OBJECTDIR}/wiznet/Ethernet/socket.o ${OBJECTDIR}/wiznet/Ethernet/wizchip_conf.o ${OBJECTDIR}/main.o ${OBJECTDIR}/time/time.o ${OBJECTDIR}/wdt_driver.o ${OBJECTDIR}/wizchip_spi.o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTClient.o ${OBJECTDIR}/wiznet/Internet/MQTT/mqtt_interface.o ${OBJECTDIR}/hamqtt.o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectClient.o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectServer.o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTDeserializePublish.o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTFormat.o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTPacket.o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSerializePublish.o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeClient.o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeServer.o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeServer.o
 
 # Source Files
-SOURCEFILES=fatfs/ff.c fatfs/ffsystem.c fatfs/ffunicode.c fatfs/sd.c fatfs/diskio.c wiznet/Ethernet/W5100/w5100.c wiznet/Ethernet/socket.c wiznet/Ethernet/wizchip_conf.c main.c time/time.c wdt_driver.c wizchip_spi.c
+SOURCEFILES=fatfs/ff.c fatfs/ffsystem.c fatfs/ffunicode.c fatfs/sd.c fatfs/diskio.c wiznet/Ethernet/W5100/w5100.c wiznet/Ethernet/socket.c wiznet/Ethernet/wizchip_conf.c main.c time/time.c wdt_driver.c wizchip_spi.c wiznet/Internet/MQTT/MQTTClient.c wiznet/Internet/MQTT/mqtt_interface.c hamqtt.c wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectClient.c wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectServer.c wiznet/Internet/MQTT/MQTTPacket/src/MQTTDeserializePublish.c wiznet/Internet/MQTT/MQTTPacket/src/MQTTFormat.c wiznet/Internet/MQTT/MQTTPacket/src/MQTTPacket.c wiznet/Internet/MQTT/MQTTPacket/src/MQTTSerializePublish.c wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeClient.c wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeServer.c wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.c wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeServer.c
 
 # Pack Options 
 PACK_COMPILER_OPTIONS=-I "${DFP_DIR}/include"
@@ -176,6 +176,84 @@ ${OBJECTDIR}/wizchip_spi.o: wizchip_spi.c  .generated_files/flags/default/533c3c
 	@${RM} ${OBJECTDIR}/wizchip_spi.o 
 	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -Wall -MD -MP -MF "${OBJECTDIR}/wizchip_spi.o.d" -MT "${OBJECTDIR}/wizchip_spi.o.d" -MT ${OBJECTDIR}/wizchip_spi.o  -o ${OBJECTDIR}/wizchip_spi.o wizchip_spi.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
 	
+${OBJECTDIR}/wiznet/Internet/MQTT/MQTTClient.o: wiznet/Internet/MQTT/MQTTClient.c  .generated_files/flags/default/801d0d2b60a00ea2b3a462a4afc8e36ae7cc68ad .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/wiznet/Internet/MQTT" 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTClient.o.d 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTClient.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -Wall -MD -MP -MF "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTClient.o.d" -MT "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTClient.o.d" -MT ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTClient.o  -o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTClient.o wiznet/Internet/MQTT/MQTTClient.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/wiznet/Internet/MQTT/mqtt_interface.o: wiznet/Internet/MQTT/mqtt_interface.c  .generated_files/flags/default/3609d785f0c0437efa68daa3f142a613ec1bc3c7 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/wiznet/Internet/MQTT" 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/mqtt_interface.o.d 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/mqtt_interface.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -Wall -MD -MP -MF "${OBJECTDIR}/wiznet/Internet/MQTT/mqtt_interface.o.d" -MT "${OBJECTDIR}/wiznet/Internet/MQTT/mqtt_interface.o.d" -MT ${OBJECTDIR}/wiznet/Internet/MQTT/mqtt_interface.o  -o ${OBJECTDIR}/wiznet/Internet/MQTT/mqtt_interface.o wiznet/Internet/MQTT/mqtt_interface.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/hamqtt.o: hamqtt.c  .generated_files/flags/default/565197ada7d8db3539b48e7c6dac75f8d69dc1c9 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/hamqtt.o.d 
+	@${RM} ${OBJECTDIR}/hamqtt.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -Wall -MD -MP -MF "${OBJECTDIR}/hamqtt.o.d" -MT "${OBJECTDIR}/hamqtt.o.d" -MT ${OBJECTDIR}/hamqtt.o  -o ${OBJECTDIR}/hamqtt.o hamqtt.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectClient.o: wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectClient.c  .generated_files/flags/default/c070998418cd9cf2b3451889d62f4691cba812a0 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src" 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectClient.o.d 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectClient.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -Wall -MD -MP -MF "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectClient.o.d" -MT "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectClient.o.d" -MT ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectClient.o  -o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectClient.o wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectClient.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectServer.o: wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectServer.c  .generated_files/flags/default/76d0cc64366a70b65cdefbfd33fb53738c49a579 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src" 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectServer.o.d 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectServer.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -Wall -MD -MP -MF "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectServer.o.d" -MT "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectServer.o.d" -MT ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectServer.o  -o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectServer.o wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectServer.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTDeserializePublish.o: wiznet/Internet/MQTT/MQTTPacket/src/MQTTDeserializePublish.c  .generated_files/flags/default/13b4d5b095a1160f5d170fcab9e75dbf0a2fe6f6 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src" 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTDeserializePublish.o.d 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTDeserializePublish.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -Wall -MD -MP -MF "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTDeserializePublish.o.d" -MT "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTDeserializePublish.o.d" -MT ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTDeserializePublish.o  -o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTDeserializePublish.o wiznet/Internet/MQTT/MQTTPacket/src/MQTTDeserializePublish.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTFormat.o: wiznet/Internet/MQTT/MQTTPacket/src/MQTTFormat.c  .generated_files/flags/default/502d5f07148fc3c1b02fccf4f658539274f3c891 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src" 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTFormat.o.d 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTFormat.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -Wall -MD -MP -MF "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTFormat.o.d" -MT "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTFormat.o.d" -MT ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTFormat.o  -o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTFormat.o wiznet/Internet/MQTT/MQTTPacket/src/MQTTFormat.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTPacket.o: wiznet/Internet/MQTT/MQTTPacket/src/MQTTPacket.c  .generated_files/flags/default/ac5e97105db9cf82c18d3ed2cc645deb6871c1c .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src" 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTPacket.o.d 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTPacket.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -Wall -MD -MP -MF "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTPacket.o.d" -MT "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTPacket.o.d" -MT ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTPacket.o  -o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTPacket.o wiznet/Internet/MQTT/MQTTPacket/src/MQTTPacket.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSerializePublish.o: wiznet/Internet/MQTT/MQTTPacket/src/MQTTSerializePublish.c  .generated_files/flags/default/df4af90d3ae87b19ad130f1c5e7430c626468bc4 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src" 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSerializePublish.o.d 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSerializePublish.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -Wall -MD -MP -MF "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSerializePublish.o.d" -MT "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSerializePublish.o.d" -MT ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSerializePublish.o  -o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSerializePublish.o wiznet/Internet/MQTT/MQTTPacket/src/MQTTSerializePublish.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeClient.o: wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeClient.c  .generated_files/flags/default/95f002d86fe3f2266a529bd359f7cffe9de53b0e .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src" 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeClient.o.d 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeClient.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -Wall -MD -MP -MF "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeClient.o.d" -MT "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeClient.o.d" -MT ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeClient.o  -o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeClient.o wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeClient.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeServer.o: wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeServer.c  .generated_files/flags/default/2e7604fcba31ce744ee2ddb081cb54e5f6a58c3 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src" 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeServer.o.d 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeServer.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -Wall -MD -MP -MF "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeServer.o.d" -MT "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeServer.o.d" -MT ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeServer.o  -o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeServer.o wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeServer.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.o: wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.c  .generated_files/flags/default/26fb045d243d0abac8e49bb08265409df7a4be9b .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src" 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.o.d 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -Wall -MD -MP -MF "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.o.d" -MT "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.o.d" -MT ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.o  -o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.o wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeServer.o: wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeServer.c  .generated_files/flags/default/4388f1bd70e3b90f59cf4f7e45d2ab1f45609279 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src" 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeServer.o.d 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeServer.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -Wall -MD -MP -MF "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeServer.o.d" -MT "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeServer.o.d" -MT ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeServer.o  -o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeServer.o wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeServer.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
 else
 ${OBJECTDIR}/fatfs/ff.o: fatfs/ff.c  .generated_files/flags/default/726b024c042dd92f62fed1cbdbc2a163a70d30ce .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/fatfs" 
@@ -248,6 +326,84 @@ ${OBJECTDIR}/wizchip_spi.o: wizchip_spi.c  .generated_files/flags/default/b362a1
 	@${RM} ${OBJECTDIR}/wizchip_spi.o.d 
 	@${RM} ${OBJECTDIR}/wizchip_spi.o 
 	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -Wall -MD -MP -MF "${OBJECTDIR}/wizchip_spi.o.d" -MT "${OBJECTDIR}/wizchip_spi.o.d" -MT ${OBJECTDIR}/wizchip_spi.o  -o ${OBJECTDIR}/wizchip_spi.o wizchip_spi.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/wiznet/Internet/MQTT/MQTTClient.o: wiznet/Internet/MQTT/MQTTClient.c  .generated_files/flags/default/6382142bea215ea960f77082aeaff0ce44540db6 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/wiznet/Internet/MQTT" 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTClient.o.d 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTClient.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -Wall -MD -MP -MF "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTClient.o.d" -MT "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTClient.o.d" -MT ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTClient.o  -o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTClient.o wiznet/Internet/MQTT/MQTTClient.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/wiznet/Internet/MQTT/mqtt_interface.o: wiznet/Internet/MQTT/mqtt_interface.c  .generated_files/flags/default/feab97c2349eefa6eb5f36cdd0117a392951eef2 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/wiznet/Internet/MQTT" 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/mqtt_interface.o.d 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/mqtt_interface.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -Wall -MD -MP -MF "${OBJECTDIR}/wiznet/Internet/MQTT/mqtt_interface.o.d" -MT "${OBJECTDIR}/wiznet/Internet/MQTT/mqtt_interface.o.d" -MT ${OBJECTDIR}/wiznet/Internet/MQTT/mqtt_interface.o  -o ${OBJECTDIR}/wiznet/Internet/MQTT/mqtt_interface.o wiznet/Internet/MQTT/mqtt_interface.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/hamqtt.o: hamqtt.c  .generated_files/flags/default/8079b51b778d06df27523e6dc56aa921414bb670 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/hamqtt.o.d 
+	@${RM} ${OBJECTDIR}/hamqtt.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -Wall -MD -MP -MF "${OBJECTDIR}/hamqtt.o.d" -MT "${OBJECTDIR}/hamqtt.o.d" -MT ${OBJECTDIR}/hamqtt.o  -o ${OBJECTDIR}/hamqtt.o hamqtt.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectClient.o: wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectClient.c  .generated_files/flags/default/4a24447154593463f5663993cd935bf1a5b73375 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src" 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectClient.o.d 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectClient.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -Wall -MD -MP -MF "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectClient.o.d" -MT "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectClient.o.d" -MT ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectClient.o  -o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectClient.o wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectClient.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectServer.o: wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectServer.c  .generated_files/flags/default/1a6524fd926bac6d379b35452ea2af434aa5f3d0 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src" 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectServer.o.d 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectServer.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -Wall -MD -MP -MF "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectServer.o.d" -MT "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectServer.o.d" -MT ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectServer.o  -o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectServer.o wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectServer.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTDeserializePublish.o: wiznet/Internet/MQTT/MQTTPacket/src/MQTTDeserializePublish.c  .generated_files/flags/default/bcb6acc9317f17bf8211440e5ad0e87cdf647250 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src" 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTDeserializePublish.o.d 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTDeserializePublish.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -Wall -MD -MP -MF "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTDeserializePublish.o.d" -MT "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTDeserializePublish.o.d" -MT ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTDeserializePublish.o  -o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTDeserializePublish.o wiznet/Internet/MQTT/MQTTPacket/src/MQTTDeserializePublish.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTFormat.o: wiznet/Internet/MQTT/MQTTPacket/src/MQTTFormat.c  .generated_files/flags/default/bcf42edd38ffb0427dc1838e8ecf273b2574ece .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src" 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTFormat.o.d 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTFormat.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -Wall -MD -MP -MF "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTFormat.o.d" -MT "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTFormat.o.d" -MT ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTFormat.o  -o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTFormat.o wiznet/Internet/MQTT/MQTTPacket/src/MQTTFormat.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTPacket.o: wiznet/Internet/MQTT/MQTTPacket/src/MQTTPacket.c  .generated_files/flags/default/a150a19131eafed030deae0d7466b0189443a317 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src" 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTPacket.o.d 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTPacket.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -Wall -MD -MP -MF "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTPacket.o.d" -MT "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTPacket.o.d" -MT ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTPacket.o  -o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTPacket.o wiznet/Internet/MQTT/MQTTPacket/src/MQTTPacket.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSerializePublish.o: wiznet/Internet/MQTT/MQTTPacket/src/MQTTSerializePublish.c  .generated_files/flags/default/d67c29b0dfc9ac9deae7acce9f5f8a8985a321d7 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src" 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSerializePublish.o.d 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSerializePublish.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -Wall -MD -MP -MF "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSerializePublish.o.d" -MT "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSerializePublish.o.d" -MT ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSerializePublish.o  -o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSerializePublish.o wiznet/Internet/MQTT/MQTTPacket/src/MQTTSerializePublish.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeClient.o: wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeClient.c  .generated_files/flags/default/6eb48b0483f820ef5b58dd3e3a2c3491472d154a .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src" 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeClient.o.d 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeClient.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -Wall -MD -MP -MF "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeClient.o.d" -MT "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeClient.o.d" -MT ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeClient.o  -o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeClient.o wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeClient.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeServer.o: wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeServer.c  .generated_files/flags/default/6aba9445de36bf0b3800c0f8066bc43a78850834 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src" 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeServer.o.d 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeServer.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -Wall -MD -MP -MF "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeServer.o.d" -MT "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeServer.o.d" -MT ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeServer.o  -o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeServer.o wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeServer.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.o: wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.c  .generated_files/flags/default/4ea105d822fd51d09268151e6bf9da20be8cf23a .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src" 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.o.d 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -Wall -MD -MP -MF "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.o.d" -MT "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.o.d" -MT ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.o  -o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.o wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeServer.o: wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeServer.c  .generated_files/flags/default/78f1f281f4b73019d749fed3d2fc3157dc1d539b .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src" 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeServer.o.d 
+	@${RM} ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeServer.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -Wall -MD -MP -MF "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeServer.o.d" -MT "${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeServer.o.d" -MT ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeServer.o  -o ${OBJECTDIR}/wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeServer.o wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeServer.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
 	
 endif
 

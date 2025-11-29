@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <avr/io.h>
 #include <util/delay.h>
+#include <avr/pgmspace.h>
 
 #include "./wiznet/Ethernet/wizchip_conf.h"
 #include "wizchip_spi.h"
@@ -167,19 +168,16 @@ void print_network_information(wiz_NetInfo net_info) {
     ctlwizchip(CW_GET_ID, (void *)tmp_str);
 #if _WIZCHIP_ <= W5500
     if (net_info.dhcp == NETINFO_DHCP) {
-        printf("====================================================================================================\n");
-        printf(" %s network configuration : DHCP\n\n", (char *)tmp_str);
+        printf_P(PSTR(" %s network configuration : DHCP\r\n"), (char *)tmp_str);
     } else {
-        printf("====================================================================================================\n");
-        printf(" %s network configuration : static\n\n", (char *)tmp_str);
+        printf_P(PSTR(" %s network configuration : static\r\n"), (char *)tmp_str);
     }
 
-    printf(" MAC         : %02X:%02X:%02X:%02X:%02X:%02X\n", net_info.mac[0], net_info.mac[1], net_info.mac[2], net_info.mac[3], net_info.mac[4], net_info.mac[5]);
-    printf(" IP          : %d.%d.%d.%d\n", net_info.ip[0], net_info.ip[1], net_info.ip[2], net_info.ip[3]);
-    printf(" Subnet Mask : %d.%d.%d.%d\n", net_info.sn[0], net_info.sn[1], net_info.sn[2], net_info.sn[3]);
-    printf(" Gateway     : %d.%d.%d.%d\n", net_info.gw[0], net_info.gw[1], net_info.gw[2], net_info.gw[3]);
-    printf(" DNS         : %d.%d.%d.%d\n", net_info.dns[0], net_info.dns[1], net_info.dns[2], net_info.dns[3]);
-    printf("====================================================================================================\n\n");
+    printf_P(PSTR(" MAC         : %02X:%02X:%02X:%02X:%02X:%02X\r\n"), net_info.mac[0], net_info.mac[1], net_info.mac[2], net_info.mac[3], net_info.mac[4], net_info.mac[5]);
+    printf_P(PSTR(" IP          : %d.%d.%d.%d\r\n"), net_info.ip[0], net_info.ip[1], net_info.ip[2], net_info.ip[3]);
+    printf_P(PSTR(" Subnet Mask : %d.%d.%d.%d\r\n"), net_info.sn[0], net_info.sn[1], net_info.sn[2], net_info.sn[3]);
+    printf_P(PSTR(" Gateway     : %d.%d.%d.%d\r\n"), net_info.gw[0], net_info.gw[1], net_info.gw[2], net_info.gw[3]);
+    printf_P(PSTR(" DNS         : %d.%d.%d.%d\r\n"), net_info.dns[0], net_info.dns[1], net_info.dns[2], net_info.dns[3]);
 #else
     printf("==========================================================\n");
     printf(" %s network configuration\n\n", (char *)tmp_str);

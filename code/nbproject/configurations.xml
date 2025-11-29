@@ -19,11 +19,24 @@
           <itemPath>wiznet/Ethernet/wizchip_conf.h</itemPath>
         </logicalFolder>
         <logicalFolder name="f2" displayName="Internet" projectFiles="true">
+          <logicalFolder name="f1" displayName="MQTT" projectFiles="true">
+            <logicalFolder name="f1" displayName="MQTTPacket" projectFiles="true">
+              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnect.h</itemPath>
+              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTFormat.h</itemPath>
+              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTPacket.h</itemPath>
+              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTPublish.h</itemPath>
+              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribe.h</itemPath>
+              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/StackTrace.h</itemPath>
+            </logicalFolder>
+            <itemPath>wiznet/Internet/MQTT/MQTTClient.h</itemPath>
+            <itemPath>wiznet/Internet/MQTT/mqtt_interface.h</itemPath>
+          </logicalFolder>
         </logicalFolder>
       </logicalFolder>
       <itemPath>time/time.h</itemPath>
       <itemPath>wdt_driver.h</itemPath>
       <itemPath>wizchip_spi.h</itemPath>
+      <itemPath>hamqtt.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -53,18 +66,36 @@
           <itemPath>wiznet/Ethernet/wizchip_conf.c</itemPath>
         </logicalFolder>
         <logicalFolder name="f2" displayName="Internet" projectFiles="true">
+          <logicalFolder name="f1" displayName="MQTT" projectFiles="true">
+            <logicalFolder name="f1" displayName="MQTTPacket" projectFiles="true">
+              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectClient.c</itemPath>
+              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectServer.c</itemPath>
+              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTDeserializePublish.c</itemPath>
+              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTFormat.c</itemPath>
+              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTPacket.c</itemPath>
+              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTSerializePublish.c</itemPath>
+              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeClient.c</itemPath>
+              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeServer.c</itemPath>
+              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.c</itemPath>
+              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeServer.c</itemPath>
+            </logicalFolder>
+            <itemPath>wiznet/Internet/MQTT/MQTTClient.c</itemPath>
+            <itemPath>wiznet/Internet/MQTT/mqtt_interface.c</itemPath>
+          </logicalFolder>
         </logicalFolder>
       </logicalFolder>
       <itemPath>main.c</itemPath>
       <itemPath>time/time.c</itemPath>
       <itemPath>wdt_driver.c</itemPath>
       <itemPath>wizchip_spi.c</itemPath>
+      <itemPath>hamqtt.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
     <Elem>usb</Elem>
     <Elem>mqtt</Elem>
     <Elem>wiznet/Ethernet</Elem>
+    <Elem>wiznet/Internet/MQTT</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
