@@ -187,7 +187,7 @@
         <property key="call-prologues" value="false"/>
         <property key="default-bitfield-type" value="true"/>
         <property key="default-char-type" value="true"/>
-        <property key="extra-include-directories" value=""/>
+        <property key="extra-include-directories" value="wiznet/Ethernet"/>
         <property key="extra-warnings" value="false"/>
         <property key="garbage-collect-data" value="true"/>
         <property key="garbage-collect-functions" value="true"/>
@@ -197,7 +197,7 @@
         <property key="no-system-directories" value="false"/>
         <property key="optimization-level" value="-O1"/>
         <property key="pack-struct" value="true"/>
-        <property key="preprocessor-macros" value="F_CPU=32000000"/>
+        <property key="preprocessor-macros" value="F_CPU=32000000;_WIZCHIP_=W5100"/>
         <property key="preprocessor-macros-undefined" value=""/>
         <property key="save-temps" value="false"/>
         <property key="short-calls" value="false"/>
