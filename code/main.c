@@ -12,9 +12,10 @@
 #include <avr/interrupt.h>
 #include <util/delay.h>
 #include <avr/pgmspace.h>
+#include <time.h>
 
 #include "wdt_driver.h"
-#include "time/time.h"
+#include "time/my_time.h"
 #include "fatfs/ff.h"
 #include "fatfs/ffconf.h"
 #include "fatfs/diskio.h"
@@ -22,8 +23,15 @@
 #include "wiznet/Ethernet/wizchip_conf.h"
 #include "wiznet/Internet/MQTT/mqtt_interface.h"
 #include "wiznet/Internet/MQTT/MQTTClient.h"
+#include "wiznet/Internet/DHCP/dhcp.h"
+#include "wiznet/Internet/SNTP/sntp.h"
 #include "hamqtt.h"
 //#include "usb/usb_xmega.h"
+
+#define SOCKET_DHCP 1
+#define SOCKET_SNTP 2
+#define DHCP_RETRY_COUNT 10
+#define TIMEZONE 21      // For UTC
 
 //USB_ENDPOINTS(0);
 
@@ -36,8 +44,19 @@ static wiz_NetInfo g_net_info =
     .sn = {255, 255, 255, 0},                    // Subnet Mask
     .gw = {192, 168, 1, 1},                     // Gateway
     .dns = {8, 8, 8, 8},                         // DNS server
-    .dhcp = NETINFO_STATIC        
+    .dhcp = NETINFO_DHCP        
 };
+
+static uint8_t g_sntp_server_ip[4] = {192, 168, 1, 61};
+
+uint8_t g_dhcp_get_ip_flag = 0;
+
+static uint8_t g_ethernet_buf[512];
+static uint8_t g_sntp_buf[64];
+
+void dhcp_handle(void);
+void sntp_handle(void);
+time_t convertToUnixTimestamp(datetime t);
 
 static void uart_init (void);
 static int uart_putchar(char c, FILE *stream);
@@ -46,6 +65,8 @@ static void inline initialize_peripherals (void);
 static void handle_blink (void);
 static inline void handle_write(void);
 static FILE mystdout = FDEV_SETUP_STREAM (uart_putchar, NULL, _FDEV_SETUP_WRITE);
+static void wizchip_dhcp_assign(void);
+static void wizchip_dhcp_conflict(void);
 
 /*
  * 
@@ -85,9 +106,18 @@ int main(int argc, char** argv) {
     wizchip_initialize();
     wizchip_check();
     
-    network_initialize(g_net_info);
-    /* Get network information */
-    print_network_information(g_net_info);
+    if (g_net_info.dhcp == NETINFO_DHCP) { // DHCP
+        printf_P(PSTR("DHCP client running\r\n"));
+        DHCP_init(SOCKET_DHCP, g_ethernet_buf);
+        reg_dhcp_cbfunc(wizchip_dhcp_assign, wizchip_dhcp_assign, wizchip_dhcp_conflict);
+    }
+    else {
+        network_initialize(g_net_info);
+        /* Get network information */
+        print_network_information(g_net_info);
+    }
+    
+    SNTP_init(SOCKET_SNTP, g_sntp_server_ip, TIMEZONE, g_sntp_buf);
     
     PMIC.CTRL = PMIC_LOLVLEN_bm;        //Without USB 
     //PMIC.CTRL = PMIC_LOLVLEN_bm | PMIC_MEDLVLEN_bm | PMIC_HILVLEN_bm; 
@@ -99,6 +129,8 @@ int main(int argc, char** argv) {
     WDT_EnableAndSetTimeout(WDT_PER_2KCLK_gc);
     
     while (1) {
+        dhcp_handle();
+        sntp_handle();
         mqtt_handle();
         handle_blink();
         handle_write();
@@ -207,7 +239,7 @@ static void handle_blink (void) {
     if ((uint32_t)(millis()-blink_timer1) > 1000) {
         blink_timer1 = millis();
         PORTF_OUTTGL = PIN2_bm;
-        printf_P(PSTR("Test! Millis: %lu\r\n"), millis());
+        printf_P(PSTR("Test! Millis: %lu RTC: %lu\r\n"), millis(), rtc_get_timestamp());
     }
     
     if ((uint32_t)(millis()-blink_timer2) > 2000) {
@@ -248,4 +280,114 @@ static inline void handle_write(void) {
         printf_P(PSTR("f_close\r\n"));
         f_close(&file);
     }
+}
+
+static void wizchip_dhcp_assign(void) {
+    getIPfromDHCP(g_net_info.ip);
+    getGWfromDHCP(g_net_info.gw);
+    getSNfromDHCP(g_net_info.sn);
+    getDNSfromDHCP(g_net_info.dns);
+
+    g_net_info.dhcp = NETINFO_DHCP;
+
+    /* Network initialize */
+    network_initialize(g_net_info); // apply from DHCP
+
+    print_network_information(g_net_info);
+    printf(" DHCP leased time : %ld seconds\r\n", getDHCPLeasetime());
+}
+
+static void wizchip_dhcp_conflict(void) {
+    printf(" Conflict IP from DHCP\r\n");
+    // halt or reset or any...
+    while (1); // this example is halt.
+}
+
+void dhcp_handle(void) {
+    int32_t retval = 0;
+    static uint8_t dhcp_retry = 0;
+    
+    if (g_net_info.dhcp == NETINFO_DHCP) {
+            retval = DHCP_run();
+
+        if (retval == DHCP_IP_LEASED) {
+            if (g_dhcp_get_ip_flag == 0) {
+                printf(" DHCP success\r\n");
+
+                g_dhcp_get_ip_flag = 1;
+            }
+        } else if (retval == DHCP_FAILED) {
+            g_dhcp_get_ip_flag = 0;
+            dhcp_retry++;
+
+            if (dhcp_retry <= DHCP_RETRY_COUNT) {
+                printf(" DHCP timeout occurred and retry %d\r\n", dhcp_retry);
+            }
+        }
+
+        if (dhcp_retry > DHCP_RETRY_COUNT) {
+            printf(" DHCP failed\r\n");
+
+            DHCP_stop();
+
+            while (1)
+                ;
+        }
+    }
+}
+
+void sntp_handle(void)
+{
+    static uint32_t last_update = 0;
+    static uint8_t in_progress = 0;
+    static datetime time;
+    int8_t retval;
+
+    // Re-sync every 1 hour (3600000 ms)
+    uint8_t should_sync = ((uint32_t)(millis() - last_update) >= 3600000UL) || rtc_get_timestamp() < 1764539075;
+    if (g_dhcp_get_ip_flag && !in_progress && should_sync)
+    {
+        in_progress = 1;
+        SNTP_run(&time);   // Start SNTP (sends request)
+        return;
+    }
+
+    if (in_progress)
+    {
+        
+        retval = SNTP_run(&time);   // continue processing
+        
+        if (retval == 1)
+        {
+            printf_P(PSTR("Time updated: %d-%d-%d %02d:%02d:%02d\r\n"),
+                     time.yy, time.mo, time.dd, time.hh, time.mm, time.ss);
+            
+            uint64_t timestamp = convertToUnixTimestamp(time);
+            printf_P(PSTR("Timestamp: %lu\r\n"), timestamp);
+            rtc_set_timestamp(timestamp);
+
+            last_update = millis();
+            in_progress = 0;
+        }
+        else if (retval == -1)
+        {
+            printf_P(PSTR("SNTP error or timeout.\r\n"));
+            last_update = millis() + 60000; // retry in 1 minute
+            in_progress = 0;
+        }
+    }
+}
+
+time_t convertToUnixTimestamp(datetime t) {
+    struct tm tm_time;
+
+    tm_time.tm_year = t.yy - 1900;  // tm_year = years since 1900
+    tm_time.tm_mon  = t.mo - 1;     // tm_mon = 0-11
+    tm_time.tm_mday = t.dd;         // tm_mday = 1-31
+    tm_time.tm_hour = t.hh;         // tm_hour = 0-23
+    tm_time.tm_min  = t.mm;         // tm_min = 0-59
+    tm_time.tm_sec  = t.ss;         // tm_sec = 0-59
+    tm_time.tm_isdst = 0;           // not considering daylight saving
+
+    return mktime(&tm_time) + UNIX_OFFSET;        // returns time_t (Unix timestamp)
 }

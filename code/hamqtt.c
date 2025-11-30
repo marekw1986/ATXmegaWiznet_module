@@ -1,14 +1,15 @@
 #include <avr/pgmspace.h>
 #include <string.h>
 #include "hamqtt.h"
-#include "time/time.h"
+#include "time/my_time.h"
+#include "wiznet/Ethernet/W5100/w5100.h"
 #include "wiznet/Internet/MQTT/mqtt_interface.h"
 #include "wiznet/Internet/MQTT/MQTTClient.h"
 
 #define SOCKET_MQTT 0
 
 #define MQTT_DEFAULT_TIMEOUT 1000
-#define MQTT_KEEP_ALIVE 60
+#define MQTT_KEEP_ALIVE 5
 #define MQTT_BROKER_PORT 1883
 #define MQTT_CLIENT_ID "ATxmegaClient"
 #define MQTT_TOPIC     "test/topic"
@@ -18,6 +19,8 @@ typedef enum {MQTT_IDLE, MQTT_CONNECT_TO_BROKER, MQTT_SUBSCRIBE, MQTT_PUBLISH_DI
 
 static state_t state = MQTT_IDLE;
 
+extern uint8_t g_dhcp_get_ip_flag;
+
 static uint8_t g_mqtt_broker_ip[4] = {192, 168, 1, 61};
 
 static Network g_mqtt_network;
@@ -25,8 +28,8 @@ static MQTTPacket_connectData g_mqtt_packet_connect_data = MQTTPacket_connectDat
 static MQTTClient g_mqtt_client;
 static MQTTMessage g_mqtt_message;
 
-static uint8_t mqtt_sendbuf[128];
-static uint8_t mqtt_recvbuf[128];
+static uint8_t mqtt_sendbuf[1024];
+static uint8_t mqtt_recvbuf[1024];
 
 static void message_arrived(MessageData *msg_data);
 
@@ -36,7 +39,7 @@ void mqtt_handle(void) {
     
     switch (state) {
         case MQTT_IDLE:
-            if ((uint32_t)(millis() - mqtt_timer) > 200) {
+            if (((uint32_t)(millis() - mqtt_timer) > 200) && g_dhcp_get_ip_flag) {
                 state = MQTT_CONNECT_TO_BROKER;
                 mqtt_timer = millis();
             }
@@ -76,7 +79,7 @@ void mqtt_handle(void) {
         break;
         
         case MQTT_SUBSCRIBE:
-            retval = MQTTSubscribe(&g_mqtt_client, "test/cmnd/#", QOS0, message_arrived);
+            retval = MQTTSubscribe(&g_mqtt_client, "test/cmnd", QOS0, message_arrived);
             if (retval < 0) {
                 printf_P(PSTR("Subscribe failed: %d\r\n"), retval);
             }
@@ -102,11 +105,12 @@ void mqtt_handle(void) {
         break;
         
         case MQTT_HANDLE_CONNECTION:
-//            retval = MQTTYield(&g_mqtt_client, g_mqtt_packet_connect_data.keepAliveInterval);
+//            retval = MQTTYield(&g_mqtt_client, 60);
 //            if (retval  < 0) {
-//                printf_P(PSTR(" Yield error : %d\n"), retval);
+//                printf_P(PSTR(" Yield error : %d\r\n"), retval);
 //            }
             if ((uint32_t)(millis() - mqtt_timer) > 30000) {
+                printf_P(PSTR("Publishing message\r\n"));
                 mqtt_timer = millis();
                 g_mqtt_message.payload = "Test message!";
                 g_mqtt_message.payloadlen = strlen(g_mqtt_message.payload);
@@ -124,6 +128,7 @@ void mqtt_handle(void) {
 
 static void message_arrived(MessageData *msg_data) {
     MQTTMessage *message = msg_data->message;
-
-    printf_P(PSTR("%.*s"), (uint32_t)message->payloadlen, (uint8_t *)message->payload);
+    printf_P(PSTR("MQTT callback called! Payload: %s\r\n"), message->payload);
+    
+//    printf_P(PSTR("%.*s"), (uint32_t)message->payloadlen, (uint8_t *)message->payload);
 }

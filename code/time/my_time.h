@@ -5,8 +5,8 @@
  * Created on 25 sierpnia 2019, 11:55
  */
 
-#ifndef TIME_H
-#define	TIME_H
+#ifndef MY_TIME_H
+#define	MY_TIME_H
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -20,10 +20,11 @@ extern "C" {
 
 void time_init (void);
 uint32_t millis (void);
-
+uint32_t rtc_get_timestamp(void);
+void rtc_set_timestamp(uint32_t new);
 #ifdef	__cplusplus
 }
 #endif
 
-#endif	/* TIME_H */
+#endif	/* MY_TIME_H */
 

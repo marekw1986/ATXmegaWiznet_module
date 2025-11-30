@@ -12,7 +12,7 @@
 #include <stdlib.h>
 
 #include "sd.h"
-#include "../time/time.h"
+#include "../time/my_time.h"
 
 
 /* Definitions of physical drive number for each drive */

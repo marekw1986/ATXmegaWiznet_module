@@ -19,6 +19,9 @@
           <itemPath>wiznet/Ethernet/wizchip_conf.h</itemPath>
         </logicalFolder>
         <logicalFolder name="f2" displayName="Internet" projectFiles="true">
+          <logicalFolder name="f2" displayName="DHCP" projectFiles="true">
+            <itemPath>wiznet/Internet/DHCP/dhcp.h</itemPath>
+          </logicalFolder>
           <logicalFolder name="f1" displayName="MQTT" projectFiles="true">
             <logicalFolder name="f1" displayName="MQTTPacket" projectFiles="true">
               <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnect.h</itemPath>
@@ -31,12 +34,15 @@
             <itemPath>wiznet/Internet/MQTT/MQTTClient.h</itemPath>
             <itemPath>wiznet/Internet/MQTT/mqtt_interface.h</itemPath>
           </logicalFolder>
+          <logicalFolder name="f3" displayName="SNTP" projectFiles="true">
+            <itemPath>wiznet/Internet/SNTP/sntp.h</itemPath>
+          </logicalFolder>
         </logicalFolder>
       </logicalFolder>
-      <itemPath>time/time.h</itemPath>
       <itemPath>wdt_driver.h</itemPath>
       <itemPath>wizchip_spi.h</itemPath>
       <itemPath>hamqtt.h</itemPath>
+      <itemPath>time/my_time.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
@@ -66,6 +72,9 @@
           <itemPath>wiznet/Ethernet/wizchip_conf.c</itemPath>
         </logicalFolder>
         <logicalFolder name="f2" displayName="Internet" projectFiles="true">
+          <logicalFolder name="f2" displayName="DHCP" projectFiles="true">
+            <itemPath>wiznet/Internet/DHCP/dhcp.c</itemPath>
+          </logicalFolder>
           <logicalFolder name="f1" displayName="MQTT" projectFiles="true">
             <logicalFolder name="f1" displayName="MQTTPacket" projectFiles="true">
               <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectClient.c</itemPath>
@@ -82,13 +91,16 @@
             <itemPath>wiznet/Internet/MQTT/MQTTClient.c</itemPath>
             <itemPath>wiznet/Internet/MQTT/mqtt_interface.c</itemPath>
           </logicalFolder>
+          <logicalFolder name="f3" displayName="SNTP" projectFiles="true">
+            <itemPath>wiznet/Internet/SNTP/sntp.c</itemPath>
+          </logicalFolder>
         </logicalFolder>
       </logicalFolder>
       <itemPath>main.c</itemPath>
-      <itemPath>time/time.c</itemPath>
       <itemPath>wdt_driver.c</itemPath>
       <itemPath>wizchip_spi.c</itemPath>
       <itemPath>hamqtt.c</itemPath>
+      <itemPath>time/my_time.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>
@@ -96,6 +108,8 @@
     <Elem>mqtt</Elem>
     <Elem>wiznet/Ethernet</Elem>
     <Elem>wiznet/Internet/MQTT</Elem>
+    <Elem>wiznet/Internet/DHCP</Elem>
+    <Elem>wiznet/Internet/SNTP</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

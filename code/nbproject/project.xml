@@ -17,6 +17,8 @@
                 <sourceRootElem>mqtt</sourceRootElem>
                 <sourceRootElem>wiznet/Ethernet</sourceRootElem>
                 <sourceRootElem>wiznet/Internet/MQTT</sourceRootElem>
+                <sourceRootElem>wiznet/Internet/DHCP</sourceRootElem>
+                <sourceRootElem>wiznet/Internet/SNTP</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>
