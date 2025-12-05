@@ -102,6 +102,7 @@ uint8_t memsize[2][4] = {{2, 2, 2, 2}, {2, 2, 2, 2}};
 
         return;
     }
+#if  _WIZCHIP_ > W5100       // W5100 does not have PHYLINK register
     /* Check PHY link status */
     do {
         if (ctlwizchip(CW_GET_PHYLINK, (void *)&temp) == -1) {
@@ -110,6 +111,7 @@ uint8_t memsize[2][4] = {{2, 2, 2, 2}, {2, 2, 2, 2}};
             return;
         }
     } while (temp == PHY_LINK_OFF);
+#endif
 }
 
 void wizchip_check(void) {
