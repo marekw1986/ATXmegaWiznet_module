@@ -1,5 +1,6 @@
 #include <avr/interrupt.h>
 #include <util/atomic.h>
+#include <time.h>
 #include "my_time.h"
 #include "../wiznet/Internet/MQTT/mqtt_interface.h"
 #include "../wiznet/Internet/DHCP/dhcp.h"
@@ -37,7 +38,18 @@ void rtc_set_timestamp(uint32_t new) {
 }
 
 uint32_t get_fattime (void) {
-    return 0xFFFFFFFF;
+    time_t rawtime;
+    struct tm* current_time;
+    
+    rawtime = rtc_get_timestamp()-UNIX_OFFSET;
+    current_time = localtime(&rawtime);
+    return ((uint32_t)(current_time->tm_year - 80) << 25)
+         | ((uint32_t)(current_time->tm_mon + 1) << 21)
+         | ((uint32_t)current_time->tm_mday << 16)
+         | ((uint32_t)current_time->tm_hour << 11)
+         | ((uint32_t)current_time->tm_min << 5)
+         | ((uint32_t)current_time->tm_sec >> 1);
+//    return 0xFFFFFFFF;
 }
 
 ISR(TCC0_OVF_vect) {
