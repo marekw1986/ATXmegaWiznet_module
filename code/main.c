@@ -26,6 +26,7 @@
 #include "wiznet/Internet/DHCP/dhcp.h"
 #include "wiznet/Internet/SNTP/sntp.h"
 #include "hamqtt.h"
+#include "wolfmqtt/mqtt_client.h"
 //#include "usb/usb_xmega.h"
 
 #define SOCKET_DHCP 1
@@ -49,7 +50,7 @@ static wiz_NetInfo g_net_info =
 
 static uint8_t g_sntp_server_ip[4] = {192, 168, 1, 61};
 
-uint8_t g_dhcp_get_ip_flag = 0;
+uint8_t ip_acquired = 0;
 
 static uint8_t g_ethernet_buf[512];
 static uint8_t g_sntp_buf[64];
@@ -131,7 +132,7 @@ int main(int argc, char** argv) {
     while (1) {
         dhcp_handle();
         sntp_handle();
-        mqtt_handle();
+//        mqtt_handle();
         handle_blink();
         handle_write();
         disk_timerproc();
@@ -311,13 +312,13 @@ void dhcp_handle(void) {
             retval = DHCP_run();
 
         if (retval == DHCP_IP_LEASED) {
-            if (g_dhcp_get_ip_flag == 0) {
+            if (ip_acquired == 0) {
                 printf(" DHCP success\r\n");
 
-                g_dhcp_get_ip_flag = 1;
+                ip_acquired = 1;
             }
         } else if (retval == DHCP_FAILED) {
-            g_dhcp_get_ip_flag = 0;
+            ip_acquired = 0;
             dhcp_retry++;
 
             if (dhcp_retry <= DHCP_RETRY_COUNT) {
@@ -330,8 +331,7 @@ void dhcp_handle(void) {
 
             DHCP_stop();
 
-            while (1)
-                ;
+            while (1);
         }
     }
 }
@@ -345,7 +345,7 @@ void sntp_handle(void)
 
     // Re-sync every 1 hour (3600000 ms)
     uint8_t should_sync = ((uint32_t)(millis() - last_update) >= 3600000UL) || rtc_get_timestamp() < 1764539075;
-    if (g_dhcp_get_ip_flag && !in_progress && should_sync)
+    if (!in_progress && should_sync)
     {
         in_progress = 1;
         SNTP_run(&time);   // Start SNTP (sends request)
@@ -354,7 +354,6 @@ void sntp_handle(void)
 
     if (in_progress)
     {
-        
         retval = SNTP_run(&time);   // continue processing
         
         if (retval == 1)
@@ -369,7 +368,7 @@ void sntp_handle(void)
             last_update = millis();
             in_progress = 0;
         }
-        else if (retval == -1)
+        else if (retval == 0)
         {
             printf_P(PSTR("SNTP error or timeout.\r\n"));
             last_update = millis() + 60000; // retry in 1 minute

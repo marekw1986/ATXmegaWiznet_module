@@ -22,22 +22,22 @@
           <logicalFolder name="f2" displayName="DHCP" projectFiles="true">
             <itemPath>wiznet/Internet/DHCP/dhcp.h</itemPath>
           </logicalFolder>
-          <logicalFolder name="f1" displayName="MQTT" projectFiles="true">
-            <logicalFolder name="f1" displayName="MQTTPacket" projectFiles="true">
-              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnect.h</itemPath>
-              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTFormat.h</itemPath>
-              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTPacket.h</itemPath>
-              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTPublish.h</itemPath>
-              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribe.h</itemPath>
-              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/StackTrace.h</itemPath>
-            </logicalFolder>
-            <itemPath>wiznet/Internet/MQTT/MQTTClient.h</itemPath>
-            <itemPath>wiznet/Internet/MQTT/mqtt_interface.h</itemPath>
-          </logicalFolder>
           <logicalFolder name="f3" displayName="SNTP" projectFiles="true">
             <itemPath>wiznet/Internet/SNTP/sntp.h</itemPath>
           </logicalFolder>
         </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="f1" displayName="WOLFMQTT" projectFiles="true">
+        <itemPath>wolfmqtt/mqtt_client.h</itemPath>
+        <itemPath>wolfmqtt/mqtt_packet.h</itemPath>
+        <itemPath>wolfmqtt/mqtt_sn_client.h</itemPath>
+        <itemPath>wolfmqtt/mqtt_sn_packet.h</itemPath>
+        <itemPath>wolfmqtt/mqtt_socket.h</itemPath>
+        <itemPath>wolfmqtt/mqtt_types.h</itemPath>
+        <itemPath>wolfmqtt/options.h</itemPath>
+        <itemPath>wolfmqtt/version.h</itemPath>
+        <itemPath>wolfmqtt/visibility.h</itemPath>
+        <itemPath>wolfmqtt/vs_settings.h</itemPath>
       </logicalFolder>
       <itemPath>wdt_driver.h</itemPath>
       <itemPath>wizchip_spi.h</itemPath>
@@ -75,26 +75,17 @@
           <logicalFolder name="f2" displayName="DHCP" projectFiles="true">
             <itemPath>wiznet/Internet/DHCP/dhcp.c</itemPath>
           </logicalFolder>
-          <logicalFolder name="f1" displayName="MQTT" projectFiles="true">
-            <logicalFolder name="f1" displayName="MQTTPacket" projectFiles="true">
-              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectClient.c</itemPath>
-              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTConnectServer.c</itemPath>
-              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTDeserializePublish.c</itemPath>
-              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTFormat.c</itemPath>
-              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTPacket.c</itemPath>
-              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTSerializePublish.c</itemPath>
-              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeClient.c</itemPath>
-              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTSubscribeServer.c</itemPath>
-              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.c</itemPath>
-              <itemPath>wiznet/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeServer.c</itemPath>
-            </logicalFolder>
-            <itemPath>wiznet/Internet/MQTT/MQTTClient.c</itemPath>
-            <itemPath>wiznet/Internet/MQTT/mqtt_interface.c</itemPath>
-          </logicalFolder>
           <logicalFolder name="f3" displayName="SNTP" projectFiles="true">
             <itemPath>wiznet/Internet/SNTP/sntp.c</itemPath>
           </logicalFolder>
         </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="f1" displayName="WOLFMQTT" projectFiles="true">
+        <itemPath>wolfmqtt/mqtt_client.c</itemPath>
+        <itemPath>wolfmqtt/mqtt_sn_client.c</itemPath>
+        <itemPath>wolfmqtt/mqtt_sn_packet.c</itemPath>
+        <itemPath>wolfmqtt/mqtt_socket.c</itemPath>
+        <itemPath>wolfmqtt/mqtt_packet.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
       <itemPath>wdt_driver.c</itemPath>
@@ -110,6 +101,7 @@
     <Elem>wiznet/Internet/MQTT</Elem>
     <Elem>wiznet/Internet/DHCP</Elem>
     <Elem>wiznet/Internet/SNTP</Elem>
+    <Elem>wolfmqtt</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
@@ -386,6 +378,10 @@
                   value="Press to select which tool pack to use"/>
         <property key="voltagevalue" value="3.25"/>
       </pk4hybrid>
+      <item path="wolfmqtt/mqtt_socket.c" ex="true" overriding="false">
+      </item>
+      <item path="wolfmqtt/mqtt_socket.h" ex="true" overriding="false">
+      </item>
     </conf>
   </confs>
 </configurationDescriptor>

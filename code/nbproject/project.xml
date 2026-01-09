@@ -19,6 +19,7 @@
                 <sourceRootElem>wiznet/Internet/MQTT</sourceRootElem>
                 <sourceRootElem>wiznet/Internet/DHCP</sourceRootElem>
                 <sourceRootElem>wiznet/Internet/SNTP</sourceRootElem>
+                <sourceRootElem>wolfmqtt</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

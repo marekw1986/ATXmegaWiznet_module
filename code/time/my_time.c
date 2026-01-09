@@ -2,7 +2,6 @@
 #include <util/atomic.h>
 #include <time.h>
 #include "my_time.h"
-#include "../wiznet/Internet/MQTT/mqtt_interface.h"
 #include "../wiznet/Internet/DHCP/dhcp.h"
 
 volatile uint32_t milliseconds = 0;
@@ -58,5 +57,4 @@ ISR(TCC0_OVF_vect) {
         rtc++;
         DHCP_time_handler();
     }
-    MilliTimer_Handler();
 }
