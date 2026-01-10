@@ -38,6 +38,7 @@
         <itemPath>wolfmqtt/version.h</itemPath>
         <itemPath>wolfmqtt/visibility.h</itemPath>
         <itemPath>wolfmqtt/vs_settings.h</itemPath>
+        <itemPath>wolfmqtt/mqttnet.h</itemPath>
       </logicalFolder>
       <itemPath>wdt_driver.h</itemPath>
       <itemPath>wizchip_spi.h</itemPath>
@@ -86,6 +87,7 @@
         <itemPath>wolfmqtt/mqtt_sn_packet.c</itemPath>
         <itemPath>wolfmqtt/mqtt_socket.c</itemPath>
         <itemPath>wolfmqtt/mqtt_packet.c</itemPath>
+        <itemPath>wolfmqtt/mqttnet.c</itemPath>
       </logicalFolder>
       <itemPath>main.c</itemPath>
       <itemPath>wdt_driver.c</itemPath>

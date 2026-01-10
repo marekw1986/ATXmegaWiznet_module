@@ -8,7 +8,7 @@
 #define SOCKET_MQTT 0
 
 #define MQTT_DEFAULT_TIMEOUT 1000
-#define MQTT_KEEP_ALIVE 5
+#define MQTT_KEEP_ALIVE 30
 #define MQTT_BROKER_PORT 1883
 #define MQTT_CLIENT_ID "ATxmegaClient"
 #define MQTT_TOPIC     "test/topic"
@@ -54,9 +54,9 @@ void mqtt_handle(void) {
         {
             MqttConnect connect;
             memset(&connect, 0, sizeof(connect));
-            connect.client_id = "xmega";
+            connect.client_id = MQTT_CLIENT_ID;
             connect.clean_session = 1;
-            connect.keep_alive_sec = 30;
+            connect.keep_alive_sec = MQTT_KEEP_ALIVE;
             rc = MqttClient_Connect(&client, &connect);
             if (rc == MQTT_CODE_CONTINUE) {
                 return; // try again next time

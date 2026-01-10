@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=fatfs/ff.c fatfs/ffsystem.c fatfs/ffunicode.c fatfs/sd.c fatfs/diskio.c wiznet/Ethernet/W5100/w5100.c wiznet/Ethernet/socket.c wiznet/Ethernet/wizchip_conf.c wiznet/Internet/DHCP/dhcp.c wiznet/Internet/SNTP/sntp.c main.c wdt_driver.c wizchip_spi.c hamqtt.c time/my_time.c wolfmqtt/mqtt_client.c wolfmqtt/mqtt_sn_client.c wolfmqtt/mqtt_sn_packet.c wolfmqtt/mqtt_packet.c
+SOURCEFILES_QUOTED_IF_SPACED=fatfs/ff.c fatfs/ffsystem.c fatfs/ffunicode.c fatfs/sd.c fatfs/diskio.c wiznet/Ethernet/W5100/w5100.c wiznet/Ethernet/socket.c wiznet/Ethernet/wizchip_conf.c wiznet/Internet/DHCP/dhcp.c wiznet/Internet/SNTP/sntp.c main.c wdt_driver.c wizchip_spi.c hamqtt.c time/my_time.c wolfmqtt/mqtt_client.c wolfmqtt/mqtt_sn_client.c wolfmqtt/mqtt_sn_packet.c wolfmqtt/mqtt_packet.c wolfmqtt/mqttnet.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/fatfs/ff.o ${OBJECTDIR}/fatfs/ffsystem.o ${OBJECTDIR}/fatfs/ffunicode.o ${OBJECTDIR}/fatfs/sd.o ${OBJECTDIR}/fatfs/diskio.o ${OBJECTDIR}/wiznet/Ethernet/W5100/w5100.o ${OBJECTDIR}/wiznet/Ethernet/socket.o ${OBJECTDIR}/wiznet/Ethernet/wizchip_conf.o ${OBJECTDIR}/wiznet/Internet/DHCP/dhcp.o ${OBJECTDIR}/wiznet/Internet/SNTP/sntp.o ${OBJECTDIR}/main.o ${OBJECTDIR}/wdt_driver.o ${OBJECTDIR}/wizchip_spi.o ${OBJECTDIR}/hamqtt.o ${OBJECTDIR}/time/my_time.o ${OBJECTDIR}/wolfmqtt/mqtt_client.o ${OBJECTDIR}/wolfmqtt/mqtt_sn_client.o ${OBJECTDIR}/wolfmqtt/mqtt_sn_packet.o ${OBJECTDIR}/wolfmqtt/mqtt_packet.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/fatfs/ff.o.d ${OBJECTDIR}/fatfs/ffsystem.o.d ${OBJECTDIR}/fatfs/ffunicode.o.d ${OBJECTDIR}/fatfs/sd.o.d ${OBJECTDIR}/fatfs/diskio.o.d ${OBJECTDIR}/wiznet/Ethernet/W5100/w5100.o.d ${OBJECTDIR}/wiznet/Ethernet/socket.o.d ${OBJECTDIR}/wiznet/Ethernet/wizchip_conf.o.d ${OBJECTDIR}/wiznet/Internet/DHCP/dhcp.o.d ${OBJECTDIR}/wiznet/Internet/SNTP/sntp.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/wdt_driver.o.d ${OBJECTDIR}/wizchip_spi.o.d ${OBJECTDIR}/hamqtt.o.d ${OBJECTDIR}/time/my_time.o.d ${OBJECTDIR}/wolfmqtt/mqtt_client.o.d ${OBJECTDIR}/wolfmqtt/mqtt_sn_client.o.d ${OBJECTDIR}/wolfmqtt/mqtt_sn_packet.o.d ${OBJECTDIR}/wolfmqtt/mqtt_packet.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/fatfs/ff.o ${OBJECTDIR}/fatfs/ffsystem.o ${OBJECTDIR}/fatfs/ffunicode.o ${OBJECTDIR}/fatfs/sd.o ${OBJECTDIR}/fatfs/diskio.o ${OBJECTDIR}/wiznet/Ethernet/W5100/w5100.o ${OBJECTDIR}/wiznet/Ethernet/socket.o ${OBJECTDIR}/wiznet/Ethernet/wizchip_conf.o ${OBJECTDIR}/wiznet/Internet/DHCP/dhcp.o ${OBJECTDIR}/wiznet/Internet/SNTP/sntp.o ${OBJECTDIR}/main.o ${OBJECTDIR}/wdt_driver.o ${OBJECTDIR}/wizchip_spi.o ${OBJECTDIR}/hamqtt.o ${OBJECTDIR}/time/my_time.o ${OBJECTDIR}/wolfmqtt/mqtt_client.o ${OBJECTDIR}/wolfmqtt/mqtt_sn_client.o ${OBJECTDIR}/wolfmqtt/mqtt_sn_packet.o ${OBJECTDIR}/wolfmqtt/mqtt_packet.o ${OBJECTDIR}/wolfmqtt/mqttnet.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/fatfs/ff.o.d ${OBJECTDIR}/fatfs/ffsystem.o.d ${OBJECTDIR}/fatfs/ffunicode.o.d ${OBJECTDIR}/fatfs/sd.o.d ${OBJECTDIR}/fatfs/diskio.o.d ${OBJECTDIR}/wiznet/Ethernet/W5100/w5100.o.d ${OBJECTDIR}/wiznet/Ethernet/socket.o.d ${OBJECTDIR}/wiznet/Ethernet/wizchip_conf.o.d ${OBJECTDIR}/wiznet/Internet/DHCP/dhcp.o.d ${OBJECTDIR}/wiznet/Internet/SNTP/sntp.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/wdt_driver.o.d ${OBJECTDIR}/wizchip_spi.o.d ${OBJECTDIR}/hamqtt.o.d ${OBJECTDIR}/time/my_time.o.d ${OBJECTDIR}/wolfmqtt/mqtt_client.o.d ${OBJECTDIR}/wolfmqtt/mqtt_sn_client.o.d ${OBJECTDIR}/wolfmqtt/mqtt_sn_packet.o.d ${OBJECTDIR}/wolfmqtt/mqtt_packet.o.d ${OBJECTDIR}/wolfmqtt/mqttnet.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/fatfs/ff.o ${OBJECTDIR}/fatfs/ffsystem.o ${OBJECTDIR}/fatfs/ffunicode.o ${OBJECTDIR}/fatfs/sd.o ${OBJECTDIR}/fatfs/diskio.o ${OBJECTDIR}/wiznet/Ethernet/W5100/w5100.o ${OBJECTDIR}/wiznet/Ethernet/socket.o ${OBJECTDIR}/wiznet/Ethernet/wizchip_conf.o ${OBJECTDIR}/wiznet/Internet/DHCP/dhcp.o ${OBJECTDIR}/wiznet/Internet/SNTP/sntp.o ${OBJECTDIR}/main.o ${OBJECTDIR}/wdt_driver.o ${OBJECTDIR}/wizchip_spi.o ${OBJECTDIR}/hamqtt.o ${OBJECTDIR}/time/my_time.o ${OBJECTDIR}/wolfmqtt/mqtt_client.o ${OBJECTDIR}/wolfmqtt/mqtt_sn_client.o ${OBJECTDIR}/wolfmqtt/mqtt_sn_packet.o ${OBJECTDIR}/wolfmqtt/mqtt_packet.o
+OBJECTFILES=${OBJECTDIR}/fatfs/ff.o ${OBJECTDIR}/fatfs/ffsystem.o ${OBJECTDIR}/fatfs/ffunicode.o ${OBJECTDIR}/fatfs/sd.o ${OBJECTDIR}/fatfs/diskio.o ${OBJECTDIR}/wiznet/Ethernet/W5100/w5100.o ${OBJECTDIR}/wiznet/Ethernet/socket.o ${OBJECTDIR}/wiznet/Ethernet/wizchip_conf.o ${OBJECTDIR}/wiznet/Internet/DHCP/dhcp.o ${OBJECTDIR}/wiznet/Internet/SNTP/sntp.o ${OBJECTDIR}/main.o ${OBJECTDIR}/wdt_driver.o ${OBJECTDIR}/wizchip_spi.o ${OBJECTDIR}/hamqtt.o ${OBJECTDIR}/time/my_time.o ${OBJECTDIR}/wolfmqtt/mqtt_client.o ${OBJECTDIR}/wolfmqtt/mqtt_sn_client.o ${OBJECTDIR}/wolfmqtt/mqtt_sn_packet.o ${OBJECTDIR}/wolfmqtt/mqtt_packet.o ${OBJECTDIR}/wolfmqtt/mqttnet.o
 
 # Source Files
-SOURCEFILES=fatfs/ff.c fatfs/ffsystem.c fatfs/ffunicode.c fatfs/sd.c fatfs/diskio.c wiznet/Ethernet/W5100/w5100.c wiznet/Ethernet/socket.c wiznet/Ethernet/wizchip_conf.c wiznet/Internet/DHCP/dhcp.c wiznet/Internet/SNTP/sntp.c main.c wdt_driver.c wizchip_spi.c hamqtt.c time/my_time.c wolfmqtt/mqtt_client.c wolfmqtt/mqtt_sn_client.c wolfmqtt/mqtt_sn_packet.c wolfmqtt/mqtt_packet.c
+SOURCEFILES=fatfs/ff.c fatfs/ffsystem.c fatfs/ffunicode.c fatfs/sd.c fatfs/diskio.c wiznet/Ethernet/W5100/w5100.c wiznet/Ethernet/socket.c wiznet/Ethernet/wizchip_conf.c wiznet/Internet/DHCP/dhcp.c wiznet/Internet/SNTP/sntp.c main.c wdt_driver.c wizchip_spi.c hamqtt.c time/my_time.c wolfmqtt/mqtt_client.c wolfmqtt/mqtt_sn_client.c wolfmqtt/mqtt_sn_packet.c wolfmqtt/mqtt_packet.c wolfmqtt/mqttnet.c
 
 # Pack Options 
 PACK_COMPILER_OPTIONS=-I "${DFP_DIR}/include"
@@ -218,6 +218,12 @@ ${OBJECTDIR}/wolfmqtt/mqtt_packet.o: wolfmqtt/mqtt_packet.c  .generated_files/fl
 	@${RM} ${OBJECTDIR}/wolfmqtt/mqtt_packet.o 
 	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -D_WIZCHIP_=W5100  -I "wiznet/Ethernet" -Wall -MD -MP -MF "${OBJECTDIR}/wolfmqtt/mqtt_packet.o.d" -MT "${OBJECTDIR}/wolfmqtt/mqtt_packet.o.d" -MT ${OBJECTDIR}/wolfmqtt/mqtt_packet.o  -o ${OBJECTDIR}/wolfmqtt/mqtt_packet.o wolfmqtt/mqtt_packet.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
 	
+${OBJECTDIR}/wolfmqtt/mqttnet.o: wolfmqtt/mqttnet.c  .generated_files/flags/default/992641c6063d05615abb2d7d06a828120c91dc9c .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/wolfmqtt" 
+	@${RM} ${OBJECTDIR}/wolfmqtt/mqttnet.o.d 
+	@${RM} ${OBJECTDIR}/wolfmqtt/mqttnet.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -D_WIZCHIP_=W5100  -I "wiznet/Ethernet" -Wall -MD -MP -MF "${OBJECTDIR}/wolfmqtt/mqttnet.o.d" -MT "${OBJECTDIR}/wolfmqtt/mqttnet.o.d" -MT ${OBJECTDIR}/wolfmqtt/mqttnet.o  -o ${OBJECTDIR}/wolfmqtt/mqttnet.o wolfmqtt/mqttnet.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
 else
 ${OBJECTDIR}/fatfs/ff.o: fatfs/ff.c  .generated_files/flags/default/130c18d4450cd619d4860c0a46e807dcec4ea96c .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/fatfs" 
@@ -332,6 +338,12 @@ ${OBJECTDIR}/wolfmqtt/mqtt_packet.o: wolfmqtt/mqtt_packet.c  .generated_files/fl
 	@${RM} ${OBJECTDIR}/wolfmqtt/mqtt_packet.o.d 
 	@${RM} ${OBJECTDIR}/wolfmqtt/mqtt_packet.o 
 	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -D_WIZCHIP_=W5100  -I "wiznet/Ethernet" -Wall -MD -MP -MF "${OBJECTDIR}/wolfmqtt/mqtt_packet.o.d" -MT "${OBJECTDIR}/wolfmqtt/mqtt_packet.o.d" -MT ${OBJECTDIR}/wolfmqtt/mqtt_packet.o  -o ${OBJECTDIR}/wolfmqtt/mqtt_packet.o wolfmqtt/mqtt_packet.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/wolfmqtt/mqttnet.o: wolfmqtt/mqttnet.c  .generated_files/flags/default/2fda92355ec9eefef8c8444fac34eff4484434f2 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/wolfmqtt" 
+	@${RM} ${OBJECTDIR}/wolfmqtt/mqttnet.o.d 
+	@${RM} ${OBJECTDIR}/wolfmqtt/mqttnet.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -D_WIZCHIP_=W5100  -I "wiznet/Ethernet" -Wall -MD -MP -MF "${OBJECTDIR}/wolfmqtt/mqttnet.o.d" -MT "${OBJECTDIR}/wolfmqtt/mqttnet.o.d" -MT ${OBJECTDIR}/wolfmqtt/mqttnet.o  -o ${OBJECTDIR}/wolfmqtt/mqttnet.o wolfmqtt/mqttnet.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
 	
 endif
 
