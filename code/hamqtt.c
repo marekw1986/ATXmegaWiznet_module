@@ -3,9 +3,8 @@
 #include "hamqtt.h"
 #include "time/my_time.h"
 #include "wiznet/Ethernet/W5100/w5100.h"
+#include "wolfmqtt/mqttnet.h"
 #include "wolfmqtt/mqtt_client.h"
-
-#define SOCKET_MQTT 0
 
 #define MQTT_DEFAULT_TIMEOUT 1000
 #define MQTT_KEEP_ALIVE 30
@@ -28,6 +27,7 @@ static uint8_t mqtt_sendbuf[1024];
 static uint8_t mqtt_recvbuf[1024];
 
 void mqtt_init(void) {
+    MqttNetInit(&net);
     MqttClient_Init(
         &client,
         &net,

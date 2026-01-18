@@ -119,6 +119,7 @@ int main(int argc, char** argv) {
     }
     
     SNTP_init(SOCKET_SNTP, g_sntp_server_ip, TIMEZONE, g_sntp_buf);
+    mqtt_init();
     
     PMIC.CTRL = PMIC_LOLVLEN_bm;        //Without USB 
     //PMIC.CTRL = PMIC_LOLVLEN_bm | PMIC_MEDLVLEN_bm | PMIC_HILVLEN_bm; 
@@ -132,7 +133,7 @@ int main(int argc, char** argv) {
     while (1) {
         dhcp_handle();
         sntp_handle();
-//        mqtt_handle();
+        mqtt_handle();
         handle_blink();
         handle_write();
         disk_timerproc();

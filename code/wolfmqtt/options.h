@@ -19,6 +19,13 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1335, USA
  */
 
+#ifndef EAGAIN
+    #define EAGAIN        (-11)
+#endif
+
+#ifndef EWOULDBLOCK
+    #define EWOULDBLOCK   EAGAIN
+#endif
 
 /* default blank options for autoconf */
 
@@ -35,7 +42,6 @@
 /* =============================
  * Networking
  * ============================= */
-#define WOLFMQTT_CUSTOM_SOCKETS
 #define WOLFMQTT_NONBLOCK
 
 /* =============================

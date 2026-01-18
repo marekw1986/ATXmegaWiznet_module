@@ -2,10 +2,9 @@
 #include "../wiznet/Ethernet/socket.h"
 #include "options.h"
 #include "mqtt_types.h"
-#include "mqtt_socket.h"
 #include "mqttnet.h"
 
-#define MQTT_SOCKET 1
+#define MQTT_SOCKET 0
 
 static int NetConnect(void *context, const char* host, word16 port, int timeout_ms);
 static int NetRead(void *context, byte* buf, int buf_len, int timeout_ms);
