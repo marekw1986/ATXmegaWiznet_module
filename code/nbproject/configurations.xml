@@ -4,11 +4,49 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <logicalFolder name="f5" displayName="CLOCK" projectFiles="true">
+        <itemPath>clock/osc.h</itemPath>
+        <itemPath>clock/pll.h</itemPath>
+        <itemPath>clock/sysclk.h</itemPath>
+        <itemPath>clock/conf_clock.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f7" displayName="COMMON" projectFiles="true">
+        <itemPath>common/clz_ctz.h</itemPath>
+        <itemPath>common/compiler.h</itemPath>
+        <itemPath>common/parts.h</itemPath>
+        <itemPath>common/preprocessor.h</itemPath>
+        <itemPath>common/mrepeat.h</itemPath>
+        <itemPath>common/stringz.h</itemPath>
+        <itemPath>common/tpaste.h</itemPath>
+        <itemPath>common/interrupt.h</itemPath>
+        <itemPath>common/interrupt_avr8.h</itemPath>
+        <itemPath>common/keyboard.h</itemPath>
+        <itemPath>common/assembler.h</itemPath>
+        <itemPath>common/gas.h</itemPath>
+        <itemPath>common/iar.h</itemPath>
+      </logicalFolder>
       <logicalFolder name="f2" displayName="FATFS" projectFiles="true">
         <itemPath>fatfs/diskio.h</itemPath>
         <itemPath>fatfs/ff.h</itemPath>
         <itemPath>fatfs/ffconf.h</itemPath>
         <itemPath>fatfs/sd.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f6" displayName="NVM" projectFiles="true">
+        <itemPath>nvm/nvm.h</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f3" displayName="USB_CDC" projectFiles="true">
+        <itemPath>usb_cdc/udc.h</itemPath>
+        <itemPath>usb_cdc/udc_desc.h</itemPath>
+        <itemPath>usb_cdc/udi.h</itemPath>
+        <itemPath>usb_cdc/udi_cdc.h</itemPath>
+        <itemPath>usb_cdc/udi_cdc_conf.h</itemPath>
+        <itemPath>usb_cdc/usb_device.h</itemPath>
+        <itemPath>usb_cdc/usb_protocol.h</itemPath>
+        <itemPath>usb_cdc/usb_protocol_cdc.h</itemPath>
+        <itemPath>usb_cdc/udd.h</itemPath>
+        <itemPath>usb_cdc/conf_usb.h</itemPath>
+        <itemPath>usb_cdc/cdc.h</itemPath>
+        <itemPath>usb_cdc/usb_atmel.h</itemPath>
       </logicalFolder>
       <logicalFolder name="f4" displayName="Wiznet" projectFiles="true">
         <logicalFolder name="f1" displayName="Ethernet" projectFiles="true">
@@ -57,12 +95,26 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <logicalFolder name="f5" displayName="CLOCK" projectFiles="true">
+        <itemPath>clock/sysclk.c</itemPath>
+      </logicalFolder>
       <logicalFolder name="f2" displayName="FATFS" projectFiles="true">
         <itemPath>fatfs/ff.c</itemPath>
         <itemPath>fatfs/ffsystem.c</itemPath>
         <itemPath>fatfs/ffunicode.c</itemPath>
         <itemPath>fatfs/sd.c</itemPath>
         <itemPath>fatfs/diskio.c</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f6" displayName="NVM" projectFiles="true">
+        <itemPath>nvm/nvm.c</itemPath>
+        <itemPath>nvm/nvm_asm.s</itemPath>
+      </logicalFolder>
+      <logicalFolder name="f3" displayName="USB_CDC" projectFiles="true">
+        <itemPath>usb_cdc/udc.c</itemPath>
+        <itemPath>usb_cdc/udi_cdc.c</itemPath>
+        <itemPath>usb_cdc/udi_cdc_desc.c</itemPath>
+        <itemPath>usb_cdc/usb_device.c</itemPath>
+        <itemPath>usb_cdc/cdc.c</itemPath>
       </logicalFolder>
       <logicalFolder name="f4" displayName="Wiznet" projectFiles="true">
         <logicalFolder name="f1" displayName="Ethernet" projectFiles="true">
@@ -104,6 +156,13 @@
     <Elem>wiznet/Internet/DHCP</Elem>
     <Elem>wiznet/Internet/SNTP</Elem>
     <Elem>wolfmqtt</Elem>
+    <Elem>asf/xmega/drivers/usb</Elem>
+    <Elem>asf/common/services/usb/udc</Elem>
+    <Elem>asf/common/services/usb/class/cdc/device</Elem>
+    <Elem>usb_cdc</Elem>
+    <Elem>clock</Elem>
+    <Elem>nvm</Elem>
+    <Elem>common</Elem>
   </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

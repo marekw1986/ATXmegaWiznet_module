@@ -51,17 +51,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=fatfs/ff.c fatfs/ffsystem.c fatfs/ffunicode.c fatfs/sd.c fatfs/diskio.c wiznet/Ethernet/W5100/w5100.c wiznet/Ethernet/socket.c wiznet/Ethernet/wizchip_conf.c wiznet/Internet/DHCP/dhcp.c wiznet/Internet/SNTP/sntp.c wolfmqtt/mqtt_client.c wolfmqtt/mqtt_sn_client.c wolfmqtt/mqtt_sn_packet.c wolfmqtt/mqtt_socket.c wolfmqtt/mqtt_packet.c wolfmqtt/mqttnet.c main.c wdt_driver.c wizchip_spi.c hamqtt.c time/my_time.c
+SOURCEFILES_QUOTED_IF_SPACED=fatfs/ff.c fatfs/ffsystem.c fatfs/ffunicode.c fatfs/sd.c fatfs/diskio.c wiznet/Ethernet/W5100/w5100.c wiznet/Ethernet/socket.c wiznet/Ethernet/wizchip_conf.c wiznet/Internet/DHCP/dhcp.c wiznet/Internet/SNTP/sntp.c wolfmqtt/mqtt_client.c wolfmqtt/mqtt_sn_client.c wolfmqtt/mqtt_sn_packet.c wolfmqtt/mqtt_socket.c wolfmqtt/mqtt_packet.c wolfmqtt/mqttnet.c main.c wdt_driver.c wizchip_spi.c hamqtt.c time/my_time.c usb_cdc/udc.c usb_cdc/udi_cdc.c usb_cdc/udi_cdc_desc.c usb_cdc/usb_device.c usb_cdc/cdc.c clock/sysclk.c nvm/nvm.c nvm/nvm_asm.s
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/fatfs/ff.o ${OBJECTDIR}/fatfs/ffsystem.o ${OBJECTDIR}/fatfs/ffunicode.o ${OBJECTDIR}/fatfs/sd.o ${OBJECTDIR}/fatfs/diskio.o ${OBJECTDIR}/wiznet/Ethernet/W5100/w5100.o ${OBJECTDIR}/wiznet/Ethernet/socket.o ${OBJECTDIR}/wiznet/Ethernet/wizchip_conf.o ${OBJECTDIR}/wiznet/Internet/DHCP/dhcp.o ${OBJECTDIR}/wiznet/Internet/SNTP/sntp.o ${OBJECTDIR}/wolfmqtt/mqtt_client.o ${OBJECTDIR}/wolfmqtt/mqtt_sn_client.o ${OBJECTDIR}/wolfmqtt/mqtt_sn_packet.o ${OBJECTDIR}/wolfmqtt/mqtt_socket.o ${OBJECTDIR}/wolfmqtt/mqtt_packet.o ${OBJECTDIR}/wolfmqtt/mqttnet.o ${OBJECTDIR}/main.o ${OBJECTDIR}/wdt_driver.o ${OBJECTDIR}/wizchip_spi.o ${OBJECTDIR}/hamqtt.o ${OBJECTDIR}/time/my_time.o
-POSSIBLE_DEPFILES=${OBJECTDIR}/fatfs/ff.o.d ${OBJECTDIR}/fatfs/ffsystem.o.d ${OBJECTDIR}/fatfs/ffunicode.o.d ${OBJECTDIR}/fatfs/sd.o.d ${OBJECTDIR}/fatfs/diskio.o.d ${OBJECTDIR}/wiznet/Ethernet/W5100/w5100.o.d ${OBJECTDIR}/wiznet/Ethernet/socket.o.d ${OBJECTDIR}/wiznet/Ethernet/wizchip_conf.o.d ${OBJECTDIR}/wiznet/Internet/DHCP/dhcp.o.d ${OBJECTDIR}/wiznet/Internet/SNTP/sntp.o.d ${OBJECTDIR}/wolfmqtt/mqtt_client.o.d ${OBJECTDIR}/wolfmqtt/mqtt_sn_client.o.d ${OBJECTDIR}/wolfmqtt/mqtt_sn_packet.o.d ${OBJECTDIR}/wolfmqtt/mqtt_socket.o.d ${OBJECTDIR}/wolfmqtt/mqtt_packet.o.d ${OBJECTDIR}/wolfmqtt/mqttnet.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/wdt_driver.o.d ${OBJECTDIR}/wizchip_spi.o.d ${OBJECTDIR}/hamqtt.o.d ${OBJECTDIR}/time/my_time.o.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/fatfs/ff.o ${OBJECTDIR}/fatfs/ffsystem.o ${OBJECTDIR}/fatfs/ffunicode.o ${OBJECTDIR}/fatfs/sd.o ${OBJECTDIR}/fatfs/diskio.o ${OBJECTDIR}/wiznet/Ethernet/W5100/w5100.o ${OBJECTDIR}/wiznet/Ethernet/socket.o ${OBJECTDIR}/wiznet/Ethernet/wizchip_conf.o ${OBJECTDIR}/wiznet/Internet/DHCP/dhcp.o ${OBJECTDIR}/wiznet/Internet/SNTP/sntp.o ${OBJECTDIR}/wolfmqtt/mqtt_client.o ${OBJECTDIR}/wolfmqtt/mqtt_sn_client.o ${OBJECTDIR}/wolfmqtt/mqtt_sn_packet.o ${OBJECTDIR}/wolfmqtt/mqtt_socket.o ${OBJECTDIR}/wolfmqtt/mqtt_packet.o ${OBJECTDIR}/wolfmqtt/mqttnet.o ${OBJECTDIR}/main.o ${OBJECTDIR}/wdt_driver.o ${OBJECTDIR}/wizchip_spi.o ${OBJECTDIR}/hamqtt.o ${OBJECTDIR}/time/my_time.o ${OBJECTDIR}/usb_cdc/udc.o ${OBJECTDIR}/usb_cdc/udi_cdc.o ${OBJECTDIR}/usb_cdc/udi_cdc_desc.o ${OBJECTDIR}/usb_cdc/usb_device.o ${OBJECTDIR}/usb_cdc/cdc.o ${OBJECTDIR}/clock/sysclk.o ${OBJECTDIR}/nvm/nvm.o ${OBJECTDIR}/nvm/nvm_asm.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/fatfs/ff.o.d ${OBJECTDIR}/fatfs/ffsystem.o.d ${OBJECTDIR}/fatfs/ffunicode.o.d ${OBJECTDIR}/fatfs/sd.o.d ${OBJECTDIR}/fatfs/diskio.o.d ${OBJECTDIR}/wiznet/Ethernet/W5100/w5100.o.d ${OBJECTDIR}/wiznet/Ethernet/socket.o.d ${OBJECTDIR}/wiznet/Ethernet/wizchip_conf.o.d ${OBJECTDIR}/wiznet/Internet/DHCP/dhcp.o.d ${OBJECTDIR}/wiznet/Internet/SNTP/sntp.o.d ${OBJECTDIR}/wolfmqtt/mqtt_client.o.d ${OBJECTDIR}/wolfmqtt/mqtt_sn_client.o.d ${OBJECTDIR}/wolfmqtt/mqtt_sn_packet.o.d ${OBJECTDIR}/wolfmqtt/mqtt_socket.o.d ${OBJECTDIR}/wolfmqtt/mqtt_packet.o.d ${OBJECTDIR}/wolfmqtt/mqttnet.o.d ${OBJECTDIR}/main.o.d ${OBJECTDIR}/wdt_driver.o.d ${OBJECTDIR}/wizchip_spi.o.d ${OBJECTDIR}/hamqtt.o.d ${OBJECTDIR}/time/my_time.o.d ${OBJECTDIR}/usb_cdc/udc.o.d ${OBJECTDIR}/usb_cdc/udi_cdc.o.d ${OBJECTDIR}/usb_cdc/udi_cdc_desc.o.d ${OBJECTDIR}/usb_cdc/usb_device.o.d ${OBJECTDIR}/usb_cdc/cdc.o.d ${OBJECTDIR}/clock/sysclk.o.d ${OBJECTDIR}/nvm/nvm.o.d ${OBJECTDIR}/nvm/nvm_asm.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/fatfs/ff.o ${OBJECTDIR}/fatfs/ffsystem.o ${OBJECTDIR}/fatfs/ffunicode.o ${OBJECTDIR}/fatfs/sd.o ${OBJECTDIR}/fatfs/diskio.o ${OBJECTDIR}/wiznet/Ethernet/W5100/w5100.o ${OBJECTDIR}/wiznet/Ethernet/socket.o ${OBJECTDIR}/wiznet/Ethernet/wizchip_conf.o ${OBJECTDIR}/wiznet/Internet/DHCP/dhcp.o ${OBJECTDIR}/wiznet/Internet/SNTP/sntp.o ${OBJECTDIR}/wolfmqtt/mqtt_client.o ${OBJECTDIR}/wolfmqtt/mqtt_sn_client.o ${OBJECTDIR}/wolfmqtt/mqtt_sn_packet.o ${OBJECTDIR}/wolfmqtt/mqtt_socket.o ${OBJECTDIR}/wolfmqtt/mqtt_packet.o ${OBJECTDIR}/wolfmqtt/mqttnet.o ${OBJECTDIR}/main.o ${OBJECTDIR}/wdt_driver.o ${OBJECTDIR}/wizchip_spi.o ${OBJECTDIR}/hamqtt.o ${OBJECTDIR}/time/my_time.o
+OBJECTFILES=${OBJECTDIR}/fatfs/ff.o ${OBJECTDIR}/fatfs/ffsystem.o ${OBJECTDIR}/fatfs/ffunicode.o ${OBJECTDIR}/fatfs/sd.o ${OBJECTDIR}/fatfs/diskio.o ${OBJECTDIR}/wiznet/Ethernet/W5100/w5100.o ${OBJECTDIR}/wiznet/Ethernet/socket.o ${OBJECTDIR}/wiznet/Ethernet/wizchip_conf.o ${OBJECTDIR}/wiznet/Internet/DHCP/dhcp.o ${OBJECTDIR}/wiznet/Internet/SNTP/sntp.o ${OBJECTDIR}/wolfmqtt/mqtt_client.o ${OBJECTDIR}/wolfmqtt/mqtt_sn_client.o ${OBJECTDIR}/wolfmqtt/mqtt_sn_packet.o ${OBJECTDIR}/wolfmqtt/mqtt_socket.o ${OBJECTDIR}/wolfmqtt/mqtt_packet.o ${OBJECTDIR}/wolfmqtt/mqttnet.o ${OBJECTDIR}/main.o ${OBJECTDIR}/wdt_driver.o ${OBJECTDIR}/wizchip_spi.o ${OBJECTDIR}/hamqtt.o ${OBJECTDIR}/time/my_time.o ${OBJECTDIR}/usb_cdc/udc.o ${OBJECTDIR}/usb_cdc/udi_cdc.o ${OBJECTDIR}/usb_cdc/udi_cdc_desc.o ${OBJECTDIR}/usb_cdc/usb_device.o ${OBJECTDIR}/usb_cdc/cdc.o ${OBJECTDIR}/clock/sysclk.o ${OBJECTDIR}/nvm/nvm.o ${OBJECTDIR}/nvm/nvm_asm.o
 
 # Source Files
-SOURCEFILES=fatfs/ff.c fatfs/ffsystem.c fatfs/ffunicode.c fatfs/sd.c fatfs/diskio.c wiznet/Ethernet/W5100/w5100.c wiznet/Ethernet/socket.c wiznet/Ethernet/wizchip_conf.c wiznet/Internet/DHCP/dhcp.c wiznet/Internet/SNTP/sntp.c wolfmqtt/mqtt_client.c wolfmqtt/mqtt_sn_client.c wolfmqtt/mqtt_sn_packet.c wolfmqtt/mqtt_socket.c wolfmqtt/mqtt_packet.c wolfmqtt/mqttnet.c main.c wdt_driver.c wizchip_spi.c hamqtt.c time/my_time.c
+SOURCEFILES=fatfs/ff.c fatfs/ffsystem.c fatfs/ffunicode.c fatfs/sd.c fatfs/diskio.c wiznet/Ethernet/W5100/w5100.c wiznet/Ethernet/socket.c wiznet/Ethernet/wizchip_conf.c wiznet/Internet/DHCP/dhcp.c wiznet/Internet/SNTP/sntp.c wolfmqtt/mqtt_client.c wolfmqtt/mqtt_sn_client.c wolfmqtt/mqtt_sn_packet.c wolfmqtt/mqtt_socket.c wolfmqtt/mqtt_packet.c wolfmqtt/mqttnet.c main.c wdt_driver.c wizchip_spi.c hamqtt.c time/my_time.c usb_cdc/udc.c usb_cdc/udi_cdc.c usb_cdc/udi_cdc_desc.c usb_cdc/usb_device.c usb_cdc/cdc.c clock/sysclk.c nvm/nvm.c nvm/nvm_asm.s
 
 # Pack Options 
 PACK_COMPILER_OPTIONS=-I "${DFP_DIR}/include"
@@ -92,7 +92,21 @@ MP_PROCESSOR_OPTION=ATxmega128A3U
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: assemble
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
+${OBJECTDIR}/nvm/nvm_asm.o: nvm/nvm_asm.s  .generated_files/flags/default/95d079138e4d4ecaba1ca30fe03de2520e3a7fc9 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/nvm" 
+	@${RM} ${OBJECTDIR}/nvm/nvm_asm.o.d 
+	@${RM} ${OBJECTDIR}/nvm/nvm_asm.o 
+	@${RM} ${OBJECTDIR}/nvm/nvm_asm.o.ok ${OBJECTDIR}/nvm/nvm_asm.o.err 
+	 ${MP_CC} $(MP_EXTRA_AS_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -DDEBUG   -x assembler-with-cpp -c -D__$(MP_PROCESSOR_OPTION)__  -MD -MP -MF "${OBJECTDIR}/nvm/nvm_asm.o.d" -MT "${OBJECTDIR}/nvm/nvm_asm.o.d" -MT ${OBJECTDIR}/nvm/nvm_asm.o  -o ${OBJECTDIR}/nvm/nvm_asm.o nvm/nvm_asm.s  -DXPRJ_default=$(CND_CONF)  -Wa,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_AS_POST),-MD="${OBJECTDIR}/nvm/nvm_asm.o.asm.d",--defsym=__ICD2RAM=1,--defsym=__MPLAB_DEBUG=1,--defsym=__DEBUG=1,--gdwarf-2
+	
 else
+${OBJECTDIR}/nvm/nvm_asm.o: nvm/nvm_asm.s  .generated_files/flags/default/317d22d67bc9d8fe58b64bda1e87c84bbc2d1787 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/nvm" 
+	@${RM} ${OBJECTDIR}/nvm/nvm_asm.o.d 
+	@${RM} ${OBJECTDIR}/nvm/nvm_asm.o 
+	@${RM} ${OBJECTDIR}/nvm/nvm_asm.o.ok ${OBJECTDIR}/nvm/nvm_asm.o.err 
+	 ${MP_CC} $(MP_EXTRA_AS_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x assembler-with-cpp -c -D__$(MP_PROCESSOR_OPTION)__  -MD -MP -MF "${OBJECTDIR}/nvm/nvm_asm.o.d" -MT "${OBJECTDIR}/nvm/nvm_asm.o.d" -MT ${OBJECTDIR}/nvm/nvm_asm.o  -o ${OBJECTDIR}/nvm/nvm_asm.o nvm/nvm_asm.s  -DXPRJ_default=$(CND_CONF)  -Wa,--defsym=__MPLAB_BUILD=1$(MP_EXTRA_AS_POST),-MD="${OBJECTDIR}/nvm/nvm_asm.o.asm.d"
+	
 endif
 
 # ------------------------------------------------------------------------------------
@@ -230,6 +244,48 @@ ${OBJECTDIR}/time/my_time.o: time/my_time.c  .generated_files/flags/default/c762
 	@${RM} ${OBJECTDIR}/time/my_time.o 
 	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -D_WIZCHIP_=W5100  -I "wiznet/Ethernet" -Wall -MD -MP -MF "${OBJECTDIR}/time/my_time.o.d" -MT "${OBJECTDIR}/time/my_time.o.d" -MT ${OBJECTDIR}/time/my_time.o  -o ${OBJECTDIR}/time/my_time.o time/my_time.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
 	
+${OBJECTDIR}/usb_cdc/udc.o: usb_cdc/udc.c  .generated_files/flags/default/21ce15f01936738fbd8fc23876c59bd5321b40f5 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/usb_cdc" 
+	@${RM} ${OBJECTDIR}/usb_cdc/udc.o.d 
+	@${RM} ${OBJECTDIR}/usb_cdc/udc.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -D_WIZCHIP_=W5100  -I "wiznet/Ethernet" -Wall -MD -MP -MF "${OBJECTDIR}/usb_cdc/udc.o.d" -MT "${OBJECTDIR}/usb_cdc/udc.o.d" -MT ${OBJECTDIR}/usb_cdc/udc.o  -o ${OBJECTDIR}/usb_cdc/udc.o usb_cdc/udc.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/usb_cdc/udi_cdc.o: usb_cdc/udi_cdc.c  .generated_files/flags/default/e350b8b0519019529dd7ae1df136f9fe75dea9b5 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/usb_cdc" 
+	@${RM} ${OBJECTDIR}/usb_cdc/udi_cdc.o.d 
+	@${RM} ${OBJECTDIR}/usb_cdc/udi_cdc.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -D_WIZCHIP_=W5100  -I "wiznet/Ethernet" -Wall -MD -MP -MF "${OBJECTDIR}/usb_cdc/udi_cdc.o.d" -MT "${OBJECTDIR}/usb_cdc/udi_cdc.o.d" -MT ${OBJECTDIR}/usb_cdc/udi_cdc.o  -o ${OBJECTDIR}/usb_cdc/udi_cdc.o usb_cdc/udi_cdc.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/usb_cdc/udi_cdc_desc.o: usb_cdc/udi_cdc_desc.c  .generated_files/flags/default/c52635a79d487a7033d9896f7f87efc592d0eb5e .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/usb_cdc" 
+	@${RM} ${OBJECTDIR}/usb_cdc/udi_cdc_desc.o.d 
+	@${RM} ${OBJECTDIR}/usb_cdc/udi_cdc_desc.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -D_WIZCHIP_=W5100  -I "wiznet/Ethernet" -Wall -MD -MP -MF "${OBJECTDIR}/usb_cdc/udi_cdc_desc.o.d" -MT "${OBJECTDIR}/usb_cdc/udi_cdc_desc.o.d" -MT ${OBJECTDIR}/usb_cdc/udi_cdc_desc.o  -o ${OBJECTDIR}/usb_cdc/udi_cdc_desc.o usb_cdc/udi_cdc_desc.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/usb_cdc/usb_device.o: usb_cdc/usb_device.c  .generated_files/flags/default/d27c6093b613a1bc8370eeb3768b15b03a2fa9a4 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/usb_cdc" 
+	@${RM} ${OBJECTDIR}/usb_cdc/usb_device.o.d 
+	@${RM} ${OBJECTDIR}/usb_cdc/usb_device.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -D_WIZCHIP_=W5100  -I "wiznet/Ethernet" -Wall -MD -MP -MF "${OBJECTDIR}/usb_cdc/usb_device.o.d" -MT "${OBJECTDIR}/usb_cdc/usb_device.o.d" -MT ${OBJECTDIR}/usb_cdc/usb_device.o  -o ${OBJECTDIR}/usb_cdc/usb_device.o usb_cdc/usb_device.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/usb_cdc/cdc.o: usb_cdc/cdc.c  .generated_files/flags/default/4f376ad489cbda8e438f1022dd33a7c019f3eb59 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/usb_cdc" 
+	@${RM} ${OBJECTDIR}/usb_cdc/cdc.o.d 
+	@${RM} ${OBJECTDIR}/usb_cdc/cdc.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -D_WIZCHIP_=W5100  -I "wiznet/Ethernet" -Wall -MD -MP -MF "${OBJECTDIR}/usb_cdc/cdc.o.d" -MT "${OBJECTDIR}/usb_cdc/cdc.o.d" -MT ${OBJECTDIR}/usb_cdc/cdc.o  -o ${OBJECTDIR}/usb_cdc/cdc.o usb_cdc/cdc.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/clock/sysclk.o: clock/sysclk.c  .generated_files/flags/default/f03ce26b9e7e14a7bd88cbdaec33fcd45d4feba2 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/clock" 
+	@${RM} ${OBJECTDIR}/clock/sysclk.o.d 
+	@${RM} ${OBJECTDIR}/clock/sysclk.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -D_WIZCHIP_=W5100  -I "wiznet/Ethernet" -Wall -MD -MP -MF "${OBJECTDIR}/clock/sysclk.o.d" -MT "${OBJECTDIR}/clock/sysclk.o.d" -MT ${OBJECTDIR}/clock/sysclk.o  -o ${OBJECTDIR}/clock/sysclk.o clock/sysclk.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/nvm/nvm.o: nvm/nvm.c  .generated_files/flags/default/4241b64952ace6cf5b76b5a241a0db8eb62006f5 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/nvm" 
+	@${RM} ${OBJECTDIR}/nvm/nvm.o.d 
+	@${RM} ${OBJECTDIR}/nvm/nvm.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS} -g -DDEBUG  -gdwarf-2  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -D_WIZCHIP_=W5100  -I "wiznet/Ethernet" -Wall -MD -MP -MF "${OBJECTDIR}/nvm/nvm.o.d" -MT "${OBJECTDIR}/nvm/nvm.o.d" -MT ${OBJECTDIR}/nvm/nvm.o  -o ${OBJECTDIR}/nvm/nvm.o nvm/nvm.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
 else
 ${OBJECTDIR}/fatfs/ff.o: fatfs/ff.c  .generated_files/flags/default/130c18d4450cd619d4860c0a46e807dcec4ea96c .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
 	@${MKDIR} "${OBJECTDIR}/fatfs" 
@@ -356,6 +412,48 @@ ${OBJECTDIR}/time/my_time.o: time/my_time.c  .generated_files/flags/default/67f3
 	@${RM} ${OBJECTDIR}/time/my_time.o.d 
 	@${RM} ${OBJECTDIR}/time/my_time.o 
 	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -D_WIZCHIP_=W5100  -I "wiznet/Ethernet" -Wall -MD -MP -MF "${OBJECTDIR}/time/my_time.o.d" -MT "${OBJECTDIR}/time/my_time.o.d" -MT ${OBJECTDIR}/time/my_time.o  -o ${OBJECTDIR}/time/my_time.o time/my_time.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/usb_cdc/udc.o: usb_cdc/udc.c  .generated_files/flags/default/98a18c3eff52209cd3de8ecca0285d96f0d63aaa .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/usb_cdc" 
+	@${RM} ${OBJECTDIR}/usb_cdc/udc.o.d 
+	@${RM} ${OBJECTDIR}/usb_cdc/udc.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -D_WIZCHIP_=W5100  -I "wiznet/Ethernet" -Wall -MD -MP -MF "${OBJECTDIR}/usb_cdc/udc.o.d" -MT "${OBJECTDIR}/usb_cdc/udc.o.d" -MT ${OBJECTDIR}/usb_cdc/udc.o  -o ${OBJECTDIR}/usb_cdc/udc.o usb_cdc/udc.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/usb_cdc/udi_cdc.o: usb_cdc/udi_cdc.c  .generated_files/flags/default/4a9cd8915fdd54566f6589e0405af051d845f88f .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/usb_cdc" 
+	@${RM} ${OBJECTDIR}/usb_cdc/udi_cdc.o.d 
+	@${RM} ${OBJECTDIR}/usb_cdc/udi_cdc.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -D_WIZCHIP_=W5100  -I "wiznet/Ethernet" -Wall -MD -MP -MF "${OBJECTDIR}/usb_cdc/udi_cdc.o.d" -MT "${OBJECTDIR}/usb_cdc/udi_cdc.o.d" -MT ${OBJECTDIR}/usb_cdc/udi_cdc.o  -o ${OBJECTDIR}/usb_cdc/udi_cdc.o usb_cdc/udi_cdc.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/usb_cdc/udi_cdc_desc.o: usb_cdc/udi_cdc_desc.c  .generated_files/flags/default/8496077898c02029a9d1f673eeced56c613b099a .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/usb_cdc" 
+	@${RM} ${OBJECTDIR}/usb_cdc/udi_cdc_desc.o.d 
+	@${RM} ${OBJECTDIR}/usb_cdc/udi_cdc_desc.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -D_WIZCHIP_=W5100  -I "wiznet/Ethernet" -Wall -MD -MP -MF "${OBJECTDIR}/usb_cdc/udi_cdc_desc.o.d" -MT "${OBJECTDIR}/usb_cdc/udi_cdc_desc.o.d" -MT ${OBJECTDIR}/usb_cdc/udi_cdc_desc.o  -o ${OBJECTDIR}/usb_cdc/udi_cdc_desc.o usb_cdc/udi_cdc_desc.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/usb_cdc/usb_device.o: usb_cdc/usb_device.c  .generated_files/flags/default/61f692c27991d50bcc12d6b4689a6776bc0a4753 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/usb_cdc" 
+	@${RM} ${OBJECTDIR}/usb_cdc/usb_device.o.d 
+	@${RM} ${OBJECTDIR}/usb_cdc/usb_device.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -D_WIZCHIP_=W5100  -I "wiznet/Ethernet" -Wall -MD -MP -MF "${OBJECTDIR}/usb_cdc/usb_device.o.d" -MT "${OBJECTDIR}/usb_cdc/usb_device.o.d" -MT ${OBJECTDIR}/usb_cdc/usb_device.o  -o ${OBJECTDIR}/usb_cdc/usb_device.o usb_cdc/usb_device.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/usb_cdc/cdc.o: usb_cdc/cdc.c  .generated_files/flags/default/fc52fc92ee538d3c1d38d0231994955f392dd39a .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/usb_cdc" 
+	@${RM} ${OBJECTDIR}/usb_cdc/cdc.o.d 
+	@${RM} ${OBJECTDIR}/usb_cdc/cdc.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -D_WIZCHIP_=W5100  -I "wiznet/Ethernet" -Wall -MD -MP -MF "${OBJECTDIR}/usb_cdc/cdc.o.d" -MT "${OBJECTDIR}/usb_cdc/cdc.o.d" -MT ${OBJECTDIR}/usb_cdc/cdc.o  -o ${OBJECTDIR}/usb_cdc/cdc.o usb_cdc/cdc.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/clock/sysclk.o: clock/sysclk.c  .generated_files/flags/default/dbe131bac63f4e61bafd665a929af4f5a037b96c .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/clock" 
+	@${RM} ${OBJECTDIR}/clock/sysclk.o.d 
+	@${RM} ${OBJECTDIR}/clock/sysclk.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -D_WIZCHIP_=W5100  -I "wiznet/Ethernet" -Wall -MD -MP -MF "${OBJECTDIR}/clock/sysclk.o.d" -MT "${OBJECTDIR}/clock/sysclk.o.d" -MT ${OBJECTDIR}/clock/sysclk.o  -o ${OBJECTDIR}/clock/sysclk.o clock/sysclk.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
+	
+${OBJECTDIR}/nvm/nvm.o: nvm/nvm.c  .generated_files/flags/default/5e0d826786a66718047208e307492dcee9ea3ad4 .generated_files/flags/default/da39a3ee5e6b4b0d3255bfef95601890afd80709
+	@${MKDIR} "${OBJECTDIR}/nvm" 
+	@${RM} ${OBJECTDIR}/nvm/nvm.o.d 
+	@${RM} ${OBJECTDIR}/nvm/nvm.o 
+	 ${MP_CC}  $(MP_EXTRA_CC_PRE) -mmcu=atxmega128a3u ${PACK_COMPILER_OPTIONS} ${PACK_COMMON_OPTIONS}  -x c -c -D__$(MP_PROCESSOR_OPTION)__  -funsigned-char -funsigned-bitfields -O1 -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -DF_CPU=32000000 -D_WIZCHIP_=W5100  -I "wiznet/Ethernet" -Wall -MD -MP -MF "${OBJECTDIR}/nvm/nvm.o.d" -MT "${OBJECTDIR}/nvm/nvm.o.d" -MT ${OBJECTDIR}/nvm/nvm.o  -o ${OBJECTDIR}/nvm/nvm.o nvm/nvm.c  -DXPRJ_default=$(CND_CONF)  $(COMPARISON_BUILD) 
 	
 endif
 

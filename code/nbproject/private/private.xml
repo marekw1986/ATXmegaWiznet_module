@@ -2,17 +2,6 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group>
-            <file>file:/home/marek/Dropbox/Projekty/ATXMegaWiznet_module/code/time/my_time.h</file>
-            <file>file:/home/marek/Dropbox/Projekty/ATXMegaWiznet_module/code/wolfmqtt/mqtt_socket.h</file>
-            <file>file:/home/marek/Dropbox/Projekty/ATXMegaWiznet_module/code/hamqtt.c</file>
-            <file>file:/home/marek/Dropbox/Projekty/ATXMegaWiznet_module/code/wolfmqtt/mqtt_packet.c</file>
-            <file>file:/home/marek/Dropbox/Projekty/ATXMegaWiznet_module/code/wolfmqtt/options.h</file>
-            <file>file:/home/marek/Dropbox/Projekty/ATXMegaWiznet_module/code/main.c</file>
-            <file>file:/home/marek/Dropbox/Projekty/ATXMegaWiznet_module/code/wolfmqtt/mqttnet.c</file>
-            <file>file:/home/marek/Dropbox/Projekty/ATXMegaWiznet_module/code/hamqtt.h</file>
-            <file>file:/home/marek/Dropbox/Projekty/ATXMegaWiznet_module/code/wolfmqtt/mqttnet.h</file>
-            <file>file:/home/marek/Dropbox/Projekty/ATXMegaWiznet_module/code/wolfmqtt/mqtt_client.c</file>
-        </group>
+        <group/>
     </open-files>
 </project-private>

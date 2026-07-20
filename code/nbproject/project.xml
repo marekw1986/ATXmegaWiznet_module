@@ -20,6 +20,13 @@
                 <sourceRootElem>wiznet/Internet/DHCP</sourceRootElem>
                 <sourceRootElem>wiznet/Internet/SNTP</sourceRootElem>
                 <sourceRootElem>wolfmqtt</sourceRootElem>
+                <sourceRootElem>asf/xmega/drivers/usb</sourceRootElem>
+                <sourceRootElem>asf/common/services/usb/udc</sourceRootElem>
+                <sourceRootElem>asf/common/services/usb/class/cdc/device</sourceRootElem>
+                <sourceRootElem>usb_cdc</sourceRootElem>
+                <sourceRootElem>clock</sourceRootElem>
+                <sourceRootElem>nvm</sourceRootElem>
+                <sourceRootElem>common</sourceRootElem>
             </sourceRootList>
             <confList>
                 <confElem>

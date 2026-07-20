@@ -33,7 +33,7 @@
 /*
  * Support and FAQ: visit <a href="https://www.microchip.com/support/">Microchip Support</a>
  */
-//#include "nvm.h"
+#include "../nvm/nvm.h"
 #include "../common/keyboard.h"
 #include "cdc.h"
 
@@ -77,8 +77,8 @@ void cdc_start(void)
 	 * The 6 byte id results in a 12 byte string (1 character per nibble)
 	 */
 	for (i = 0; i < USER_SIGNATURE_USBID_SIZE / 2; i++) {
-//		temp = nvm_read_user_signature_row(
-//				i + USER_SIGNATURE_USBID_POS);
+		temp = nvm_read_user_signature_row(
+				i + USER_SIGNATURE_USBID_POS);
 		// Upper nibble
 		cdc_serial_number[i * 2] = nibble_to_ascii[(temp & 0xF0) >> 4];
 		// Lower nibble
